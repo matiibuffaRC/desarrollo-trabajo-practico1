@@ -2,7 +2,7 @@
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,13 +22,14 @@
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-    <!-- HEADER -->
-    <header class="fixed w-full top-0 left-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur z-50 shadow-sm">
+  <!-- HEADER -->
+    <header class="fixed w-full top-0 left-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur z-50 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
         <h1 class="font-bold text-lg">Mi Portfolio</h1>
-    
+        
         <!-- NAV DESKTOP -->
-        <nav class="hidden md:flex gap-6">
+        <nav class="hidden md:flex gap-6" aria-label="Navegación principal">
             <a href="#home" class="hover:text-primary">Inicio</a>
             <a href="#about" class="hover:text-primary">Sobre mí</a>
             <a href="#projects" class="hover:text-primary">Proyectos</a>
@@ -37,14 +38,25 @@
 
         <!-- BOTONES -->
         <div class="flex items-center gap-3">
-            <button id="theme-toggle" class="text-xl">🌙</button>
 
-            <!-- HAMBURGUESA PRO -->
-            <button id="menu-btn" class="md:hidden relative w-7 h-7 flex items-center justify-center">
+            <!-- DARK MODE -->
+            <button id="theme-toggle" aria-label="Cambiar modo oscuro" class="text-xl">
+            🌙
+            </button>
+
+            <!-- HAMBURGUESA -->
+            <button 
+            id="menu-btn"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="md:hidden relative w-7 h-7 flex items-center justify-center"
+            >
             <span class="absolute w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
             <span class="absolute w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
             <span class="absolute w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
             </button>
+
         </div>
         </div>
     </header>
@@ -53,66 +65,75 @@
     <div id="overlay" class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
 
     <!-- MENU MOBILE -->
-    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 z-50 p-6 flex flex-col gap-6">
+    <nav 
+        id="mobile-menu"
+        aria-label="Menú móvil"
+        class="fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 z-50 p-6 flex flex-col gap-6"
+    >
         <a href="#home" class="hover:text-primary">Inicio</a>
         <a href="#about" class="hover:text-primary">Sobre mí</a>
         <a href="#projects" class="hover:text-primary">Proyectos</a>
         <a href="#contact" class="hover:text-primary">Contacto</a>
-    </div>
+    </nav>
 
-    <!-- HERO -->
-    <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
+    <!-- MAIN -->
+    <main>
+
+        <!-- HERO -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
         <div>
-        <h2 class="text-4xl md:text-6xl font-bold mb-4">Hola, soy Matías</h2>
-        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300">Desarrollador Web</p>
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">Hola, soy Matías</h2>
+            <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Desarrollador Web</p>
         </div>
-    </section>
+        </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="py-20 px-4 max-w-5xl mx-auto">
+        <!-- ABOUT -->
+        <section id="about" class="py-20 px-4 max-w-5xl mx-auto">
         <h3 class="text-3xl font-bold mb-6">Sobre mí</h3>
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-        Soy estudiante de ingeniería en sistemas con interés en el desarrollo web.
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+            Soy estudiante de ingeniería en sistemas con interés en el desarrollo web.
         </p>
-    </section>
+        </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
+        <!-- PROJECTS -->
+        <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
         <div class="max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
+            <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
-            <h4 class="font-semibold text-xl mb-2">Proyecto 1</h4>
-            <p class="text-gray-600 dark:text-gray-300">Descripción del proyecto.</p>
+                <h4 class="font-semibold text-xl mb-2">Proyecto 1</h4>
+                <p class="text-gray-700 dark:text-gray-300">Descripción del proyecto.</p>
             </div>
 
             <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
-            <h4 class="font-semibold text-xl mb-2">Proyecto 2</h4>
-            <p class="text-gray-600 dark:text-gray-300">Descripción del proyecto.</p>
+                <h4 class="font-semibold text-xl mb-2">Proyecto 2</h4>
+                <p class="text-gray-700 dark:text-gray-300">Descripción del proyecto.</p>
             </div>
 
             <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
-            <h4 class="font-semibold text-xl mb-2">Proyecto 3</h4>
-            <p class="text-gray-600 dark:text-gray-300">Descripción del proyecto.</p>
+                <h4 class="font-semibold text-xl mb-2">Proyecto 3</h4>
+                <p class="text-gray-700 dark:text-gray-300">Descripción del proyecto.</p>
+            </div>
             </div>
         </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
+        <!-- CONTACT -->
+        <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
         <h3 class="text-3xl font-bold mb-6">Contacto</h3>
         <form class="flex flex-col gap-4">
-        <input type="text" placeholder="Nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800" />
-        <input type="email" placeholder="Email" class="p-3 rounded bg-gray-100 dark:bg-gray-800" />
-        <textarea placeholder="Mensaje" class="p-3 rounded bg-gray-100 dark:bg-gray-800"></textarea>
-        <button class="bg-primary text-white py-3 rounded">Enviar</button>
+            <input type="text" placeholder="Nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800"/>
+            <input type="email" placeholder="Email" class="p-3 rounded bg-gray-100 dark:bg-gray-800"/>
+            <textarea placeholder="Mensaje" class="p-3 rounded bg-gray-100 dark:bg-gray-800"></textarea>
+            <button class="bg-primary text-white py-3 rounded">Enviar</button>
         </form>
-    </section>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
-    <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+    <footer class="text-center py-6 text-sm text-gray-700 dark:text-gray-400">
         © 2026 - Mi Portfolio
     </footer>
 
@@ -125,7 +146,7 @@
         const overlay = document.getElementById('overlay');
         const spans = menuBtn.querySelectorAll('span');
 
-        // Posición inicial perfecta
+        // Estado inicial icono
         spans[0].style.transform = 'translateY(-6px)';
         spans[2].style.transform = 'translateY(6px)';
 
@@ -138,6 +159,9 @@
         mobileMenu.classList.remove('-translate-x-full');
         overlay.classList.remove('opacity-0', 'pointer-events-none');
 
+        menuBtn.setAttribute('aria-expanded', 'true');
+        menuBtn.setAttribute('aria-label', 'Cerrar menú');
+
         spans[0].style.transform = 'rotate(45deg)';
         spans[1].style.opacity = '0';
         spans[2].style.transform = 'rotate(-45deg)';
@@ -146,6 +170,9 @@
         function closeMenu() {
         mobileMenu.classList.add('-translate-x-full');
         overlay.classList.add('opacity-0', 'pointer-events-none');
+
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Abrir menú');
 
         spans[0].style.transform = 'translateY(-6px)';
         spans[1].style.opacity = '1';

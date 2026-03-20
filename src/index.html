@@ -1,54 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MB</title>
-    <link href="./output.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+            colors: {
+                primary: '#3b82f6'
+            }
+            }
+        }
+        }
+    </script>
 </head>
-<body>
-    <header class="text-white border border-black h-16.25 w-full bg-[#151B23] flex flex-row justify-between items-center relative px-5">
-        <div class="border border-red-500">
-            <div>
-                <h2 class="text-[.9rem] lg:text-[1.2rem]">Matías Buffa</h2>
-            </div>
-        </div>
 
-        <!-- <div class="w-7 h-7 border border-red-500">
-            <img src="./icons/menuBars.svg" alt="" class="menu-btn h-6 w-6 invert">
-        </div> -->
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-        <nav class="bg-[#151b23] border border-red-500">
-            <ul class="flex flex-row gap-2 text-[.9rem] lg:text-[1.2rem]">
-                <li>Inicio</li>
-                <li>Experiencia</li>
-                <!-- <li>Proyectos</li> -->
-                <!-- <li>Skills</li> -->
-                <li>Contactame</li>
-            </ul>
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 left-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="font-bold text-lg">Mi Portfolio</h1>
+    
+        <!-- NAV DESKTOP -->
+        <nav class="hidden md:flex gap-6">
+            <a href="#home" class="hover:text-primary">Inicio</a>
+            <a href="#about" class="hover:text-primary">Sobre mí</a>
+            <a href="#projects" class="hover:text-primary">Proyectos</a>
+            <a href="#contact" class="hover:text-primary">Contacto</a>
         </nav>
+
+        <!-- BOTONES -->
+        <div class="flex items-center gap-3">
+            <button id="theme-toggle" class="text-xl">🌙</button>
+
+            <!-- HAMBURGUESA PRO -->
+            <button id="menu-btn" class="md:hidden relative w-7 h-7 flex items-center justify-center">
+            <span class="absolute w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
+            <span class="absolute w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
+            <span class="absolute w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
+            </button>
+        </div>
+        </div>
     </header>
-    <main class="bg-[#262C36] min-h-[calc(100vh-65px)] w-full text-[white] flex flex-col items-center">
-        <div class="border border-white w-full h-[100vh] flex flex-col justify-center items-center">
-            <div class="border border-green-500 w-[90%] max-w-160 flex flex-col lg:flex-row items-center p-10 lg:gap-5">
-                <div class="w-50 h-50 lg:h-70 lg:w-70 rounded-[50%]">
-                    <img src="./imgs/profile-img.jpg" alt="Profile image" class="w-full h-full object-cover object-bottom rounded-[50%]">                    
-                </div>
-                <div class="text-center lg:text-left">
-                    <h1 class="text-[2rem] font-bold">Matías Buffa</h1>
-                    <h2 class="text-[1.5rem] font-bold">Ingeniería en Sistemas de Información</h2>
-                    <div class="border border-white flex flex-row justify-center my-2 gap-2 p-2">
-                        <div class=" rounded-lg">
-                            <a href="#" class="bg-[#3B8640] px-10 py-2 hover:bg-[#2c7a2f] rounded-xl font-bold">Linkedin</a>
-                        </div>
-                        <div class=" rounded-lg">
-                            <a href="#" class="bg-[#3B8640] px-10 py-2 hover:bg-[#2c7a2f] rounded-xl font-bold">Curriculum</a>
-                        </div>
-                    </div>
-                </div>
+
+    <!-- OVERLAY -->
+    <div id="overlay" class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 z-50 p-6 flex flex-col gap-6">
+        <a href="#home" class="hover:text-primary">Inicio</a>
+        <a href="#about" class="hover:text-primary">Sobre mí</a>
+        <a href="#projects" class="hover:text-primary">Proyectos</a>
+        <a href="#contact" class="hover:text-primary">Contacto</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
+        <div>
+        <h2 class="text-4xl md:text-6xl font-bold mb-4">Hola, soy Matías</h2>
+        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300">Desarrollador Web</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 px-4 max-w-5xl mx-auto">
+        <h3 class="text-3xl font-bold mb-6">Sobre mí</h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+        Soy estudiante de ingeniería en sistemas con interés en el desarrollo web.
+        </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
+            <h4 class="font-semibold text-xl mb-2">Proyecto 1</h4>
+            <p class="text-gray-600 dark:text-gray-300">Descripción del proyecto.</p>
+            </div>
+
+            <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
+            <h4 class="font-semibold text-xl mb-2">Proyecto 2</h4>
+            <p class="text-gray-600 dark:text-gray-300">Descripción del proyecto.</p>
+            </div>
+
+            <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
+            <h4 class="font-semibold text-xl mb-2">Proyecto 3</h4>
+            <p class="text-gray-600 dark:text-gray-300">Descripción del proyecto.</p>
             </div>
         </div>
-    </main>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
+        <h3 class="text-3xl font-bold mb-6">Contacto</h3>
+        <form class="flex flex-col gap-4">
+        <input type="text" placeholder="Nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800" />
+        <input type="email" placeholder="Email" class="p-3 rounded bg-gray-100 dark:bg-gray-800" />
+        <textarea placeholder="Mensaje" class="p-3 rounded bg-gray-100 dark:bg-gray-800"></textarea>
+        <button class="bg-primary text-white py-3 rounded">Enviar</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+        © 2026 - Mi Portfolio
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('overlay');
+        const spans = menuBtn.querySelectorAll('span');
+
+        // Posición inicial perfecta
+        spans[0].style.transform = 'translateY(-6px)';
+        spans[2].style.transform = 'translateY(6px)';
+
+        toggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        toggle.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
+        });
+
+        function openMenu() {
+        mobileMenu.classList.remove('-translate-x-full');
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+
+        spans[0].style.transform = 'rotate(45deg)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg)';
+        }
+
+        function closeMenu() {
+        mobileMenu.classList.add('-translate-x-full');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+
+        spans[0].style.transform = 'translateY(-6px)';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'translateY(6px)';
+        }
+
+        let isOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+        isOpen ? closeMenu() : openMenu();
+        isOpen = !isOpen;
+        });
+
+        overlay.addEventListener('click', () => {
+        closeMenu();
+        isOpen = false;
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
+            isOpen = false;
+        });
+        });
+    </script>
+
 </body>
-<script src="script.js"></script>
 </html>

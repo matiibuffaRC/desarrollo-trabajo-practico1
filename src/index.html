@@ -8,119 +8,185 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-        darkMode: 'class',
-        theme: {
-            extend: {
-            colors: {
-                primary: '#3b82f6'
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6'
+                    }
+                }
             }
-            }
-        }
         }
     </script>
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-  <!-- HEADER -->
-    <header class="fixed w-full top-0 left-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur z-50 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<!-- HEADER -->
+<header class="fixed w-full top-0 left-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
         <h1 class="font-bold text-lg">Mi Portfolio</h1>
         
-        <!-- NAV DESKTOP -->
-        <nav class="hidden md:flex gap-6" aria-label="Navegación principal">
+        <nav id="menu"
+            class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto
+            bg-white dark:bg-gray-900 md:bg-transparent flex flex-col md:flex-row
+            gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0
+            transition-transform duration-300 z-50">
+
             <a href="#home" class="hover:text-primary">Inicio</a>
             <a href="#about" class="hover:text-primary">Sobre mí</a>
+            <a href="#experience" class="hover:text-primary">Experiencia</a>
             <a href="#projects" class="hover:text-primary">Proyectos</a>
             <a href="#contact" class="hover:text-primary">Contacto</a>
         </nav>
 
-        <!-- BOTONES -->
         <div class="flex items-center gap-3">
+            <button id="theme-toggle" class="text-xl">🌙</button>
 
-            <!-- DARK MODE -->
-            <button id="theme-toggle" aria-label="Cambiar modo oscuro" class="text-xl">
-            🌙
+            <button id="menu-btn" class="md:hidden relative w-7 h-7 flex items-center justify-center">
+                <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
+                <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
+                <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
             </button>
-
-            <!-- HAMBURGUESA -->
-            <button 
-            id="menu-btn"
-            aria-label="Abrir menú"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-            class="md:hidden relative w-7 h-7 flex items-center justify-center"
-            >
-            <span class="absolute w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
-            <span class="absolute w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
-            <span class="absolute w-5 h-0.5 bg-current transition-all duration-300 ease-in-out"></span>
-            </button>
-
         </div>
-        </div>
-    </header>
+    </div>
+</header>
 
-    <!-- OVERLAY -->
-    <div id="overlay" class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+<div id="overlay" class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
 
-    <!-- MENU MOBILE -->
-    <nav 
-        id="mobile-menu"
-        aria-label="Menú móvil"
-        class="fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 z-50 p-6 flex flex-col gap-6"
-    >
-        <a href="#home" class="hover:text-primary">Inicio</a>
-        <a href="#about" class="hover:text-primary">Sobre mí</a>
-        <a href="#projects" class="hover:text-primary">Proyectos</a>
-        <a href="#contact" class="hover:text-primary">Contacto</a>
-    </nav>
+<main class="pt-20">
 
-    <!-- MAIN -->
-    <main>
-
-        <!-- HERO -->
-        <section id="home" class="min-h-screen flex items-center justify-center text-center px-4">
+    <!-- HERO CON FOTO -->
+    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left border border-red-500">
+        
         <div>
-            <h2 class="text-4xl md:text-6xl font-bold mb-4">Hola, soy Matías</h2>
-            <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Desarrollador Web</p>
+            <h2 class="text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h2>
+            <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
+                Desarrollador Web FullStack
+            </p>
+            <p class="text-gray-600 dark:text-gray-400">
+                Estudiante de Ingeniería en Sistemas de Información
+            </p>
         </div>
-        </section>
 
-        <!-- ABOUT -->
-        <section id="about" class="py-20 px-4 max-w-5xl mx-auto">
-        <h3 class="text-3xl font-bold mb-6">Sobre mí</h3>
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-            Soy estudiante de ingeniería en sistemas con interés en el desarrollo web.
-        </p>
-        </section>
+        <div>
+            <img 
+                src="./imgs/profile-img.jpg"
+                alt="Foto de Matías"
+                class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg"
+            >
+        </div>
 
-        <!-- PROJECTS -->
-        <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
+    </section>
+
+    <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-10">Sobre mí</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
+                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Soy un desarrollador de software especializado en aplicaciones web Full Stack, enfocado en React y Node.js. Me gusta crear soluciones eficientes y que estéticamente sean lindas.
+                </p>
+                <p class="mt-4 text-gray-700 dark:text-gray-300">
+                    Puedo destacar de mí como virtudes el trabajo en equipo, la comunicación, y la dedicación ya que cuando no conozco sobre un tema me gusta aprender sobre el mismo y buscar el porqué y el cómo de las cosas.
+                </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800 md:row-span-2 order-3 md:order-none">
+                <h4 class="text-xl font-semibold mb-6">Habilidades técnicas</h4>
+                <div class="mb-6">
+                    <p class="font-medium mb-2">Lenguajes</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">HTML</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">CSS</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">JavaScript</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TypeScript</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">C++</span>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <p class="font-medium mb-2">Frameworks y librerías</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">React</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TailwindCSS</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Next.js</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Node.js</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Express</span>
+                    </div>
+                </div>
+
+                <!-- Herramientas -->
+                <div>
+                    <p class="font-medium mb-2">Herramientas</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Git</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">GitHub</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Figma</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">VS Code</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Jira</span>
+                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Pack Office</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BLOQUE 2 -->
+            <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
+                <h4 class="font-semibold text-lg mb-2">
+                    Ingeniería en Sistemas de Información (2023 - Actualidad)
+                </h4>
+
+                <p class="text-gray-700 dark:text-gray-300">
+                    Como mencioné anteriormente me encuentro estudiando Ingeniería en Sistemas de Información, donde aprendí las bases sobre procesos de negocios, lógica, estructura de datos, algoritmos, bases de datos, análisis y diseño de sistemas de información.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experience" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-3xl font-bold mb-10">Experiencia</h3>
+
+            <div class="space-y-6">
+
+                <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow">
+                    <h4 class="font-semibold text-xl">Desarrollador Frontend</h4>
+                    <p class="text-sm text-gray-500 mb-2">Empresa X · 2024 - Actualidad</p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Desarrollo de interfaces web modernas con React y Tailwind.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow">
+                    <h4 class="font-semibold text-xl">Freelance</h4>
+                    <p class="text-sm text-gray-500 mb-2">2023 - 2024</p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Creación de páginas web para clientes.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
         <div class="max-w-6xl mx-auto">
             <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
-                <h4 class="font-semibold text-xl mb-2">Proyecto 1</h4>
-                <p class="text-gray-700 dark:text-gray-300">Descripción del proyecto.</p>
-            </div>
-
-            <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
-                <h4 class="font-semibold text-xl mb-2">Proyecto 2</h4>
-                <p class="text-gray-700 dark:text-gray-300">Descripción del proyecto.</p>
-            </div>
-
-            <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
-                <h4 class="font-semibold text-xl mb-2">Proyecto 3</h4>
-                <p class="text-gray-700 dark:text-gray-300">Descripción del proyecto.</p>
-            </div>
+                <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
+                    <h4 class="font-semibold text-xl mb-2">Proyecto 1</h4>
+                </div>
             </div>
         </div>
-        </section>
+    </section>
 
-        <!-- CONTACT -->
-        <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
         <h3 class="text-3xl font-bold mb-6">Contacto</h3>
         <form class="flex flex-col gap-4">
             <input type="text" placeholder="Nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800"/>
@@ -128,76 +194,14 @@
             <textarea placeholder="Mensaje" class="p-3 rounded bg-gray-100 dark:bg-gray-800"></textarea>
             <button class="bg-primary text-white py-3 rounded">Enviar</button>
         </form>
-        </section>
+    </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="text-center py-6 text-sm text-gray-700 dark:text-gray-400">
         © 2026 - Mi Portfolio
     </footer>
 
-    <script>
-        const toggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const overlay = document.getElementById('overlay');
-        const spans = menuBtn.querySelectorAll('span');
-
-        // Estado inicial icono
-        spans[0].style.transform = 'translateY(-6px)';
-        spans[2].style.transform = 'translateY(6px)';
-
-        toggle.addEventListener('click', () => {
-        html.classList.toggle('dark');
-        toggle.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
-        });
-
-        function openMenu() {
-        mobileMenu.classList.remove('-translate-x-full');
-        overlay.classList.remove('opacity-0', 'pointer-events-none');
-
-        menuBtn.setAttribute('aria-expanded', 'true');
-        menuBtn.setAttribute('aria-label', 'Cerrar menú');
-
-        spans[0].style.transform = 'rotate(45deg)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg)';
-        }
-
-        function closeMenu() {
-        mobileMenu.classList.add('-translate-x-full');
-        overlay.classList.add('opacity-0', 'pointer-events-none');
-
-        menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.setAttribute('aria-label', 'Abrir menú');
-
-        spans[0].style.transform = 'translateY(-6px)';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'translateY(6px)';
-        }
-
-        let isOpen = false;
-
-        menuBtn.addEventListener('click', () => {
-        isOpen ? closeMenu() : openMenu();
-        isOpen = !isOpen;
-        });
-
-        overlay.addEventListener('click', () => {
-        closeMenu();
-        isOpen = false;
-        });
-
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            closeMenu();
-            isOpen = false;
-        });
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

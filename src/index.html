@@ -23,7 +23,7 @@
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
 <!-- HEADER -->
-<header class="fixed w-full top-0 left-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur z-50 shadow-sm">
+<header class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur z-50 shadow-md">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
         <h1 class="font-bold text-lg">Mi Portfolio</h1>
@@ -58,7 +58,7 @@
 <main class="pt-20">
 
     <!-- HERO CON FOTO -->
-    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left border border-red-500">
+    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left">
         
         <div>
             <h2 class="text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h2>
@@ -74,7 +74,7 @@
             <img 
                 src="./imgs/profile-img.jpg"
                 alt="Foto de Matías"
-                class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg"
+                class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg max-w-full"
             >
         </div>
 
@@ -84,6 +84,9 @@
         <h3 class="text-3xl font-bold mb-10">Sobre mí</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
+                <h4 class="font-semibold text-lg mb-2">
+                    Matías Buffa
+                </h4>
                 <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
                     Soy un desarrollador de software especializado en aplicaciones web Full Stack, enfocado en React y Node.js. Me gusta crear soluciones eficientes y que estéticamente sean lindas.
                 </p>
@@ -154,9 +157,12 @@
 
                 <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow">
                     <h4 class="font-semibold text-xl">Desarrollador Frontend</h4>
-                    <p class="text-sm text-gray-500 mb-2">Empresa X · 2024 - Actualidad</p>
+                    <p class="text-sm text-gray-500 mb-2">Mercado Libre · 2024 - Actualidad</p>
                     <p class="text-gray-700 dark:text-gray-300">
-                        Desarrollo de interfaces web modernas con React y Tailwind.
+                        Durante mi desempeño como Desarrollador Front End en el equipo de Buyer Experience, fui responsable de evolucionar y mantener componentes críticos del flujo de compra, impactando a millones de usuarios en toda la región. Mi enfoque principal estuvo en la creación de interfaces altamente escalables, performantes y accesibles.
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Participé en la migración y mantenimiento de módulos independientes utilizando React y Node.js, permitiendo despliegues autónomos y reduciendo la deuda técnica del monolito anterior.
                     </p>
                 </div>
 
@@ -164,7 +170,7 @@
                     <h4 class="font-semibold text-xl">Freelance</h4>
                     <p class="text-sm text-gray-500 mb-2">2023 - 2024</p>
                     <p class="text-gray-700 dark:text-gray-300">
-                        Creación de páginas web para clientes.
+                        Como Cofundador y Desarrollador Fullstack en este emprendimiento de software independiente, lideré junto a un colega el ciclo de vida completo de diversos productos digitales. Mi rol fue fundamental para traducir necesidades de negocio en soluciones técnicas robustas, escalables y centradas en el usuario.
                     </p>
                 </div>
 
@@ -187,13 +193,79 @@
 
     <!-- CONTACT -->
     <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
-        <h3 class="text-3xl font-bold mb-6">Contacto</h3>
-        <form class="flex flex-col gap-4">
-            <input type="text" placeholder="Nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800"/>
-            <input type="email" placeholder="Email" class="p-3 rounded bg-gray-100 dark:bg-gray-800"/>
-            <textarea placeholder="Mensaje" class="p-3 rounded bg-gray-100 dark:bg-gray-800"></textarea>
-            <button class="bg-primary text-white py-3 rounded">Enviar</button>
+    <h3 class="text-3xl font-bold mb-10 text-center">Contacto</h3>
+
+    <div class="grid md:grid-cols-2 gap-10">
+        
+        <!-- FORMULARIO -->
+        <form class="flex flex-col gap-5">
+            <div class="flex flex-col gap-1">
+                <label for="nombre" class="text-sm font-medium">Nombre</label>
+                <input 
+                    id="nombre"
+                    type="text"
+                    placeholder="Tu nombre" 
+                    class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="email" class="text-sm font-medium">Email</label>
+                <input 
+                    id="email"
+                    type="email"
+                    placeholder="tucorreo@gmail.com" 
+                    class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="mensaje" class="text-sm font-medium">Mensaje</label>
+                <textarea 
+                    id="mensaje"
+                    rows="4"
+                    placeholder="Dejanos tu mensaje!"
+                    class="p-3 rounded bg-gray-100 dark:bg-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-primary"
+                ></textarea>
+            </div>
+            <button class="bg-primary text-white py-3 rounded hover:opacity-90 transition">
+                Enviar
+            </button>
         </form>
+
+        <!-- REDES SOCIALES -->
+        <div class="flex flex-col justify-start gap-6 bg-gray-100 dark:bg-gray-800 rounded-2xl p-7">
+            <h4 class="text-2xl font-semibold">Mis redes</h4>
+
+            <div class="flex flex-row items-center gap-2">
+                <img src="./icons/GithubIcon.svg" alt="" class="h-8 w-8">
+                <div class="flex flex-col">
+                    <a href="" class="text-[1rem] font-bold">GitHub</a>
+                    <p class="text-[.7rem]">MatiibuffaRC</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-2">
+                <img src="./icons/LinkedinIcon.svg" alt="" class="h-8 w-8">
+                <div class="flex flex-col">
+                    <a href="" class="text-[1rem] font-bold">Linkedin</a>
+                    <p class="text-[.7rem]">Matías Buffa</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-2">
+                <img src="./icons/PhoneIcon.png" alt="" class="h-8 w-8">
+                <div class="flex flex-col">
+                    <a href="" class="text-[1rem] font-bold">Teléfono</a>
+                    <p class="text-[.7rem]">(+54) 3564 50-7240</p>
+                </div>
+            </div>
+            <div class="flex flex-row items-center gap-2">
+                <img src="./icons/UbicationIcon.png" alt="" class="h-8 w-8">
+                <div class="flex flex-col">
+                    <a href="" class="text-[1rem] font-bold">Ubicación</a>
+                    <p class="text-[.7rem]">San Francisco, Córdoba.</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
     </section>
 
     </main>

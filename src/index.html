@@ -21,88 +21,53 @@
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
-
-<header id="header"
-class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur transition-colors duration-300 z-40 shadow-md">
-    
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-
-        <h1 class="font-bold text-lg">Matías Buffa</h1>
-        
-        <nav id="menu"
-            class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto
-            bg-white dark:bg-gray-900 md:bg-transparent flex flex-col md:flex-row
-            gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0
-            transition-transform duration-300 z-50">
-
-            <a href="#home" class="hover:text-primary">Inicio</a>
-            <a href="#about" class="hover:text-primary">Sobre mí</a>
-            <a href="#experience" class="hover:text-primary">Experiencia</a>
-            <a href="#projects" class="hover:text-primary">Proyectos</a>
-            <a href="#contact" class="hover:text-primary">Contacto</a>
-        </nav>
-
-        <div class="flex items-center gap-3">
-            <button id="theme-toggle" class="text-xl select-none">🌙</button>
-
-            <button id="menu-btn" class="md:hidden relative w-7 h-7 flex items-center justify-center">
-                <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
-                <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
-                <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
-            </button>
+    <header id="header" class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur transition-colors duration-300 z-40 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="font-bold text-lg">Matías Buffa</h1>
+            <nav id="menu" class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto bg-white dark:bg-gray-900 md:bg-transparent flex flex-col md:flex-row gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
+                <a href="#home" class="hover:text-primary">Inicio</a>
+                <a href="#about" class="hover:text-primary">Sobre mí</a>
+                <a href="#experience" class="hover:text-primary">Experiencia</a>
+                <a href="#projects" class="hover:text-primary">Proyectos</a>
+                <a href="#contact" class="hover:text-primary">Contacto</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" class="text-xl select-none">🌙</button>
+                <button id="menu-btn" class="md:hidden relative w-7 h-7 flex items-center justify-center">
+                    <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
+                    <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
+                    <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
+                </button>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- OVERLAY -->
-<div id="overlay"
-class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-30">
-</div>
-
-<main>
-
-    <!-- HERO CON FOTO -->
-    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left">
-    
-    <div>
-        <h2 class="text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h2>
-        
-        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
-            Desarrollador Web FullStack
-        </p>
-        
-        <p class="text-gray-600 dark:text-gray-400">
-            Estudiante de Ingeniería en Sistemas de Información
-        </p>
-
-        <!-- BOTONES -->
-        <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
-
-            <!-- CV -->
-            <a href="./cv.pdf" target="_blank"
-                class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
+    <!-- No toques el overlay que desarmas todo después -->
+    <div id="overlay" class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-30"></div>
+    <!--  -->
+    <main>
+        <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left">
+        <div>
+            <h2 class="text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h2>
+            <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
+                Desarrollador Web FullStack
+            </p>
+            <p class="text-gray-600 dark:text-gray-400">
+                Estudiante de Ingeniería en Sistemas de Información
+            </p>
+            <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="./cv.pdf" target="_blank" class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
                 📄 Ver CV
-            </a>
-
-            <!-- LINKEDIN -->
-            <a href="https://linkedin.com/in/TU-USUARIO" target="_blank"
-                class="flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition">
-                💼 LinkedIn
-            </a>
-
+                </a>
+                <a href="https://linkedin.com/in/TU-USUARIO" target="_blank" class="flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition">
+                    💼 LinkedIn
+                </a>
+            </div>
         </div>
-    </div>
-
-    <div>
-        <img 
-            src="./imgs/profile-img.jpg"
-            alt="Foto de Matías"
-            class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg max-w-full"
-        >
-    </div>
-
-</section>
-
+        <div>
+            <img  src="./imgs/profile-img.jpg" alt="Foto de Matías" class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg max-w-full">
+        </div>
+    </section>
     <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
         <h3 class="text-3xl font-bold mb-10">Sobre mí</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -117,7 +82,6 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
                     Puedo destacar de mí como virtudes el trabajo en equipo, la comunicación, y la dedicación ya que cuando no conozco sobre un tema me gusta aprender sobre el mismo y buscar el porqué y el cómo de las cosas.
                 </p>
             </div>
-
             <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800 md:row-span-2 order-3 md:order-none">
                 <h4 class="text-xl font-semibold mb-6">Habilidades técnicas</h4>
                 <div class="mb-6">
@@ -130,7 +94,6 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
                         <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">C++</span>
                     </div>
                 </div>
-
                 <div class="mb-6">
                     <p class="font-medium mb-2">Frameworks y librerías</p>
                     <div class="flex flex-wrap gap-2">
@@ -141,8 +104,6 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
                         <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Express</span>
                     </div>
                 </div>
-
-                <!-- Herramientas -->
                 <div>
                     <p class="font-medium mb-2">Herramientas</p>
                     <div class="flex flex-wrap gap-2">
@@ -154,10 +115,7 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
                         <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Pack Office</span>
                     </div>
                 </div>
-
             </div>
-
-            <!-- BLOQUE 2 -->
             <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
                 <h4 class="font-semibold text-lg mb-2">
                     Ingeniería en Sistemas de Información (2023 - Actualidad)
@@ -171,7 +129,8 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
         </div>
     </section>
 
-    <!-- EXPERIENCIA -->
+    <!-- Sección 2 -->
+
     <section id="experience" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
         <div class="max-w-5xl mx-auto">
             <h3 class="text-3xl font-bold mb-10">Experiencia</h3>
@@ -201,201 +160,178 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
         </div>
     </section>
 
-    <!-- PROJECTS -->
-<section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
-    <div class="max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
-
+    <!-- Sección 3 -->
+    <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
         <!-- UN SOLO GRID -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <!-- PROYECTO 1 -->
-    <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
-        <div class="overflow-hidden">
-            <img src="./imgs/Project1.jfif" alt="Proyecto 1"
-            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-        </div>
+                <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+                    <div class="overflow-hidden">
+                        <img src="./imgs/Project1.jfif" alt="Proyecto 1" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
 
-        <div class="p-5 flex flex-col flex-grow">
-            <div>
-                <h4 class="font-semibold text-xl mb-2">Zenit</h4>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    E-commerce para un negocio de la ciudad, con la posibilidad de armar un carrito y seleccionar cupones de descuento. Primer trabajo serio en el que trabaje en conjunto con un colega y me tocó la parte frontend.
-                </p>
-            </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div>
+                            <h4 class="font-semibold text-xl mb-2">Zenit</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                E-commerce para un negocio de la ciudad, con la posibilidad de armar un carrito y seleccionar cupones de descuento. Primer trabajo serio en el que trabaje en conjunto con un colega y me tocó la parte frontend.
+                            </p>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Tailwind</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                            </div>
 
-            <div class="mt-auto">
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Tailwind</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                            <div class="flex gap-3">
+                                <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
+                                    Demo
+                                </a>
+                                <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="flex gap-3">
-                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
-                        Demo
-                    </a>
-                    <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
-                        Código
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- PROYECTO 2 -->
-    <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
-        <div class="overflow-hidden">
-            <img src="./imgs/Project2.jfif" alt="Proyecto 1"
-            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-        </div>
+                <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+                    <div class="overflow-hidden">
+                        <img src="./imgs/Project2.jfif" alt="Proyecto 1"
+                        class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
 
-        <div class="p-5 flex flex-col flex-grow">
-            <div>
-                <h4 class="font-semibold text-xl mb-2">AutonomIA</h4>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    Plataforma integral de gestión automotriz diseñada para optimizar la reserva de turnos y servicios de mantenimiento. El sistema integra un motor de inteligencia artificial que genera diagnósticos predictivos y automatizados, personalizando la asistencia según el historial y las especificaciones técnicas de cada vehículo.
-                </p>
-            </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div>
+                            <h4 class="font-semibold text-xl mb-2">AutonomIA</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                Plataforma integral de gestión automotriz diseñada para optimizar la reserva de turnos y servicios de mantenimiento. El sistema integra un motor de inteligencia artificial que genera diagnósticos predictivos y automatizados, personalizando la asistencia según el historial y las especificaciones técnicas de cada vehículo.
+                            </p>
+                        </div>
 
-            <div class="mt-auto">
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                        <div class="mt-auto">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
+                                    Demo
+                                </a>
+                                <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="flex gap-3">
-                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
-                        Demo
-                    </a>
-                    <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
-                        Código
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- PROYECTO 3 -->
-    <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
-        <div class="overflow-hidden">
-            <img src="./imgs/Project3.jfif" alt="Proyecto 1"
-            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-        </div>
-        <div class="p-5 flex flex-col flex-grow">
-            <div>
-                <h4 class="font-semibold text-xl mb-2">Kioskito</h4>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    Sistema de control de ventas y stock que profesionaliza la gestión de comercios minoristas. Permite registrar transacciones y métodos de pago de forma segura, asegurando una administración de inventario transparente y precisa. El sistema destaca por su capacidad de elaborar reportes financieros detallados, ofreciendo una visión clara del negocio mediante informes periódicos configurables según las necesidades del usuario.
-                </p>
-            </div>
+                <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+                    <div class="overflow-hidden">
+                        <img src="./imgs/Project3.jfif" alt="Proyecto 1"
+                        class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div>
+                            <h4 class="font-semibold text-xl mb-2">Kioskito</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                Sistema de control de ventas y stock que profesionaliza la gestión de comercios minoristas. Permite registrar transacciones y métodos de pago de forma segura, asegurando una administración de inventario transparente y precisa. El sistema destaca por su capacidad de elaborar reportes financieros detallados, ofreciendo una visión clara del negocio mediante informes periódicos configurables según las necesidades del usuario.
+                            </p>
+                        </div>
 
-            <div class="mt-auto">
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
-                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
-                </div>
+                        <div class="mt-auto">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                            </div>
 
-                <div class="flex gap-3">
-                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
-                        Demo
-                    </a>
-                    <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
-                        Código
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-</section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
-    <h3 class="text-3xl font-bold mb-10 text-center">Contacto</h3>
-
-    <div class="grid md:grid-cols-2 gap-10">
-        
-        <!-- FORMULARIO -->
-        <form class="flex flex-col gap-5">
-            <div class="flex flex-col gap-1">
-                <label for="nombre" class="text-sm font-medium">Nombre</label>
-                <input 
-                    id="nombre"
-                    type="text"
-                    placeholder="Tu nombre" 
-                    class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-            </div>
-            <div class="flex flex-col gap-1">
-                <label for="email" class="text-sm font-medium">Email</label>
-                <input 
-                    id="email"
-                    type="email"
-                    placeholder="tucorreo@gmail.com" 
-                    class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-            </div>
-            <div class="flex flex-col gap-1">
-                <label for="mensaje" class="text-sm font-medium">Mensaje</label>
-                <textarea 
-                    id="mensaje"
-                    rows="4"
-                    placeholder="Dejanos tu mensaje!"
-                    class="p-3 rounded bg-gray-100 dark:bg-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-primary"
-                ></textarea>
-            </div>
-            <button class="bg-primary text-white py-3 rounded hover:opacity-90 transition">
-                Enviar
-            </button>
-        </form>
-
-        <!-- REDES SOCIALES -->
-        <div class="flex flex-col justify-start gap-6 bg-gray-100 dark:bg-gray-800 rounded-2xl p-7">
-            <h4 class="text-2xl font-semibold">Mis redes</h4>
-
-            <div class="flex flex-row items-center gap-2">
-                <img src="./icons/GithubIcon.svg" alt="" class="h-8 w-8 dark:invert">
-                <div class="flex flex-col">
-                    <a href="https://github.com/matiibuffaRC" target="_blank" class="text-[1rem] font-bold">GitHub</a>
-                    <h4 class="text-[.7rem]">MatiibuffaRC</h4>
+                            <div class="flex gap-3">
+                                <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
+                                    Demo
+                                </a>
+                                <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                                    Código
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="flex flex-row items-center gap-2">
-                <img src="./icons/LinkedinIcon.svg" alt="" class="h-8 w-8 dark:invert">
-                <div class="flex flex-col">
-                    <a href="https://www.linkedin.com/in/mat%C3%ADas-buffa-b4b901358/" target="_blank" class="text-[1rem] font-bold">Linkedin</a>
-                    <h4 class="text-[.7rem]">Matías Buffa</h4>
-                </div>
-            </div>
-            <div class="flex flex-row items-center gap-2">
-                <img src="./icons/WebIcon.png" alt="" class="h-8 w-8 dark:invert">
-                <div class="flex flex-col">
-                    <a href="https://matiibuffa.vercel.app/" target="_blank" class="text-[1rem] font-bold">Portfolio Web</a>
-                    <h4 class="text-[.7rem]">Matías Buffa</h4>
-                </div>
-            </div>
-            <div class="flex flex-row items-center gap-2">
-                <img src="./icons/UbicationIcon.png" alt="" class="h-8 w-8 dark:invert">
-                <div class="flex flex-col">
-                    <h3 href="" class="text-[1rem] font-bold">Ubicación</h3>
-                    <h4 class="text-[.7rem]">San Francisco, Córdoba.</h4>
-                </div>
-            </div>
-        </div>
-
         </div>
     </section>
 
+    <!-- CONTACT -->
+        <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
+            <h3 class="text-3xl font-bold mb-10 text-center">Contacto</h3>
+            <div class="grid md:grid-cols-2 gap-10">
+                <form class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-1">
+                        <label for="nombre" class="text-sm font-medium">Nombre</label>
+                        <input id="nombre" type="text" placeholder="Tu nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label for="email" class="text-sm font-medium">Email</label>
+                        <input id="email" type="email" placeholder="tucorreo@gmail.com" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label for="mensaje" class="text-sm font-medium">Mensaje</label>
+                        <textarea  id="mensaje" rows="4" placeholder="Dejanos tu mensaje!" class="p-3 rounded bg-gray-100 dark:bg-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-primary">
+
+                        </textarea>
+                    </div>
+                    <button class="bg-primary text-white py-3 rounded hover:opacity-90 transition">
+                        Enviar
+                    </button>
+                </form>
+                <!-- REDES SOCIALES -->
+                <div class="flex flex-col justify-start gap-6 bg-gray-100 dark:bg-gray-800 rounded-2xl p-7">
+                    <h4 class="text-2xl font-semibold">Mis redes</h4>
+
+                    <div class="flex flex-row items-center gap-2">
+                        <img src="./icons/GithubIcon.svg" alt="" class="h-8 w-8 dark:invert">
+                        <div class="flex flex-col">
+                            <a href="https://github.com/matiibuffaRC" target="_blank" class="text-[1rem] font-bold">GitHub</a>
+                            <h4 class="text-[.7rem]">MatiibuffaRC</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-2">
+                        <img src="./icons/LinkedinIcon.svg" alt="" class="h-8 w-8 dark:invert">
+                        <div class="flex flex-col">
+                            <a href="https://www.linkedin.com/in/mat%C3%ADas-buffa-b4b901358/" target="_blank" class="text-[1rem] font-bold">Linkedin</a>
+                            <h4 class="text-[.7rem]">Matías Buffa</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-2">
+                        <img src="./icons/WebIcon.png" alt="" class="h-8 w-8 dark:invert">
+                        <div class="flex flex-col">
+                            <a href="https://matiibuffa.vercel.app/" target="_blank" class="text-[1rem] font-bold">Portfolio Web</a>
+                            <h4 class="text-[.7rem]">Matías Buffa</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-2">
+                        <img src="./icons/UbicationIcon.png" alt="" class="h-8 w-8 dark:invert">
+                        <div class="flex flex-col">
+                            <h3 href="" class="text-[1rem] font-bold">Ubicación</h3>
+                            <h4 class="text-[.7rem]">San Francisco, Córdoba.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="text-center py-4 text-sm text-gray-700 dark:text-gray-400  shadow-[0_-1px_3px_rgba(0,0,0,0.1)]">

@@ -188,86 +188,111 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
         <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
 
         <!-- UN SOLO GRID -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition">
-                <img src="./imgs/Project1.jfif" alt="Proyecto 1"
-                    class="w-full h-48 object-cover">
-                <div class="p-5">
-                    <h4 class="font-semibold text-xl mb-2">Zenit</h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                        E-commerce para un negocio de la ciudad, con la posibilidad de armar un carrito y seleccionar cupones de descuento. Primer trabajo serio en el que trabaje en conjunto con un colega y me tocó la parte frontend.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Tailwind</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
-                    </div>
-                    <div class="flex gap-3">
-                        <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
-                            Demo
-                        </a>
-                        <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
-                            Código
-                        </a>
-                    </div>
-                </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- PROYECTO 1 -->
+    <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+        <img src="./imgs/Project1.jfif" alt="Proyecto 1"
+            class="w-full h-48 object-cover">
+
+        <div class="p-5 flex flex-col flex-grow">
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Zenit</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    E-commerce para un negocio de la ciudad, con la posibilidad de armar un carrito y seleccionar cupones de descuento. Primer trabajo serio en el que trabaje en conjunto con un colega y me tocó la parte frontend.
+                </p>
             </div>
 
-            <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition">
-                <img src="./imgs/Project2.jfif" alt="Proyecto 1"
-                    class="w-full h-48 object-cover">
-                <div class="p-5">
-                    <h4 class="font-semibold text-xl mb-2">AutonomIA</h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                        Plataforma integral de gestión automotriz diseñada para optimizar la reserva de turnos y servicios de mantenimiento. El sistema integra un motor de inteligencia artificial que genera diagnósticos predictivos y automatizados, personalizando la asistencia según el historial y las especificaciones técnicas de cada vehículo.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Boostrap</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
-                    </div>
-                    <div class="flex gap-3">
-                        <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
-                            Demo
-                        </a>
-                        <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
-                            Código
-                        </a>
-                    </div>
+            <div class="mt-auto">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Tailwind</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
                 </div>
-            </div>
-            
-            <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition">
-                <img src="./imgs/Project3.jfif" alt="Proyecto 1"
-                    class="w-full h-48 object-cover">
-                <div class="p-5">
-                    <h4 class="font-semibold text-xl mb-2">Kioskito</h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                        Sistema de control de ventas y stock que profesionaliza la gestión de comercios minoristas. Permite registrar transacciones y métodos de pago de forma segura, asegurando una administración de inventario transparente y precisa. El sistema destaca por su capacidad de elaborar reportes financieros detallados, ofreciendo una visión clara del negocio mediante informes periódicos configurables según las necesidades del usuario.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Boostrap</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
-                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
-                    </div>
-                    <div class="flex gap-3">
-                        <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
-                            Demo
-                        </a>
-                        <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
-                            Código
-                        </a>
-                    </div>
+
+                <div class="flex gap-3">
+                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+                        Demo
+                    </a>
+                    <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                        Código
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- PROYECTO 2 -->
+    <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+        <img src="./imgs/Project2.jfif" alt="Proyecto 2"
+            class="w-full h-48 object-cover">
+
+        <div class="p-5 flex flex-col flex-grow">
+            <div>
+                <h4 class="font-semibold text-xl mb-2">AutonomIA</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    Plataforma integral de gestión automotriz diseñada para optimizar la reserva de turnos y servicios de mantenimiento. El sistema integra un motor de inteligencia artificial que genera diagnósticos predictivos y automatizados, personalizando la asistencia según el historial y las especificaciones técnicas de cada vehículo.
+                </p>
+            </div>
+
+            <div class="mt-auto">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+                        Demo
+                    </a>
+                    <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                        Código
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROYECTO 3 -->
+    <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+        <img src="./imgs/Project3.jfif" alt="Proyecto 3"
+            class="w-full h-48 object-cover">
+
+        <div class="p-5 flex flex-col flex-grow">
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Kioskito</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    Sistema de control de ventas y stock que profesionaliza la gestión de comercios minoristas. Permite registrar transacciones y métodos de pago de forma segura, asegurando una administración de inventario transparente y precisa. El sistema destaca por su capacidad de elaborar reportes financieros detallados, ofreciendo una visión clara del negocio mediante informes periódicos configurables según las necesidades del usuario.
+                </p>
+            </div>
+
+            <div class="mt-auto">
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+                        Demo
+                    </a>
+                    <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                        Código
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 </section>
 
     <!-- CONTACT -->

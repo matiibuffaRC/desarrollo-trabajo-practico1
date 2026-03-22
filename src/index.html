@@ -22,11 +22,12 @@
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-<!-- HEADER -->
-<header class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur z-50 shadow-md">
+<header id="header"
+class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur transition-colors duration-300 z-40 shadow-md">
+    
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
-        <h1 class="font-bold text-lg">Mi Portfolio</h1>
+        <h1 class="font-bold text-lg">Matías Buffa</h1>
         
         <nav id="menu"
             class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto
@@ -53,7 +54,10 @@
     </div>
 </header>
 
-<div id="overlay" class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+<!-- OVERLAY -->
+<div id="overlay"
+class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-30">
+</div>
 
 <main class="pt-20">
 
@@ -179,17 +183,92 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
+<section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-6 rounded-2xl shadow bg-white dark:bg-gray-900">
-                    <h4 class="font-semibold text-xl mb-2">Proyecto 1</h4>
+        <!-- UN SOLO GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition">
+                <img src="./imgs/Project1.jfif" alt="Proyecto 1"
+                    class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h4 class="font-semibold text-xl mb-2">Zenit</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        E-commerce para un negocio de la ciudad, con la posibilidad de armar un carrito y seleccionar cupones de descuento. Primer trabajo serio en el que trabaje en conjunto con un colega y me tocó la parte frontend.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Tailwind</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+                            Demo
+                        </a>
+                        <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                            Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition">
+                <img src="./imgs/Project2.jfif" alt="Proyecto 1"
+                    class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h4 class="font-semibold text-xl mb-2">AutonomIA</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        Plataforma integral de gestión automotriz diseñada para optimizar la reserva de turnos y servicios de mantenimiento. El sistema integra un motor de inteligencia artificial que genera diagnósticos predictivos y automatizados, personalizando la asistencia según el historial y las especificaciones técnicas de cada vehículo.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Boostrap</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+                            Demo
+                        </a>
+                        <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                            Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition">
+                <img src="./imgs/Project3.jfif" alt="Proyecto 1"
+                    class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h4 class="font-semibold text-xl mb-2">Kioskito</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                        Sistema de control de ventas y stock que profesionaliza la gestión de comercios minoristas. Permite registrar transacciones y métodos de pago de forma segura, asegurando una administración de inventario transparente y precisa. El sistema destaca por su capacidad de elaborar reportes financieros detallados, ofreciendo una visión clara del negocio mediante informes periódicos configurables según las necesidades del usuario.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Boostrap</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                        <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+                            Demo
+                        </a>
+                        <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                            Código
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- CONTACT -->
     <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
@@ -236,28 +315,28 @@
             <h4 class="text-2xl font-semibold">Mis redes</h4>
 
             <div class="flex flex-row items-center gap-2">
-                <img src="./icons/GithubIcon.svg" alt="" class="h-8 w-8">
+                <img src="./icons/GithubIcon.svg" alt="" class="h-8 w-8 dark:invert">
                 <div class="flex flex-col">
                     <a href="" class="text-[1rem] font-bold">GitHub</a>
                     <p class="text-[.7rem]">MatiibuffaRC</p>
                 </div>
             </div>
             <div class="flex flex-row items-center gap-2">
-                <img src="./icons/LinkedinIcon.svg" alt="" class="h-8 w-8">
+                <img src="./icons/LinkedinIcon.svg" alt="" class="h-8 w-8 dark:invert">
                 <div class="flex flex-col">
                     <a href="" class="text-[1rem] font-bold">Linkedin</a>
                     <p class="text-[.7rem]">Matías Buffa</p>
                 </div>
             </div>
             <div class="flex flex-row items-center gap-2">
-                <img src="./icons/PhoneIcon.png" alt="" class="h-8 w-8">
+                <img src="./icons/PhoneIcon.png" alt="" class="h-8 w-8 dark:invert">
                 <div class="flex flex-col">
                     <a href="" class="text-[1rem] font-bold">Teléfono</a>
                     <p class="text-[.7rem]">(+54) 3564 50-7240</p>
                 </div>
             </div>
             <div class="flex flex-row items-center gap-2">
-                <img src="./icons/UbicationIcon.png" alt="" class="h-8 w-8">
+                <img src="./icons/UbicationIcon.png" alt="" class="h-8 w-8 dark:invert">
                 <div class="flex flex-col">
                     <a href="" class="text-[1rem] font-bold">Ubicación</a>
                     <p class="text-[.7rem]">San Francisco, Córdoba.</p>

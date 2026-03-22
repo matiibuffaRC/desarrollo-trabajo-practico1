@@ -4,24 +4,36 @@ const html = document.documentElement;
 const menu = document.getElementById('menu');
 const menuBtn = document.getElementById('menu-btn');
 const overlay = document.getElementById('overlay');
+const header = document.getElementById('header');
 const spans = menuBtn.querySelectorAll('span');
 
-// Icono hamburguesa inicial
+// Estado inicial hamburguesa
 spans[0].style.transform = 'translateY(-6px)';
 spans[2].style.transform = 'translateY(6px)';
 
-// DARK MODE
+// =======================
+// 🌙 DARK MODE
+// =======================
 toggle.addEventListener('click', () => {
     html.classList.toggle('dark');
     toggle.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
 });
 
-// MENU
+// =======================
+// 🍔 MENU
+// =======================
 let isOpen = false;
 
 function openMenu() {
     menu.classList.remove('-translate-x-full');
+
     overlay.classList.remove('opacity-0', 'pointer-events-none');
+    overlay.classList.add('opacity-100');
+
+    // 🔥 quitar blur
+    header.classList.remove('backdrop-blur');
+
+    document.body.classList.add('overflow-hidden');
 
     spans[0].style.transform = 'rotate(45deg)';
     spans[1].style.opacity = '0';
@@ -30,7 +42,14 @@ function openMenu() {
 
 function closeMenu() {
     menu.classList.add('-translate-x-full');
+
     overlay.classList.add('opacity-0', 'pointer-events-none');
+    overlay.classList.remove('opacity-100');
+
+    // 🔥 volver blur
+    header.classList.add('backdrop-blur');
+
+    document.body.classList.remove('overflow-hidden');
 
     spans[0].style.transform = 'translateY(-6px)';
     spans[1].style.opacity = '1';
@@ -38,7 +57,11 @@ function closeMenu() {
 }
 
 menuBtn.addEventListener('click', () => {
-    isOpen ? closeMenu() : openMenu();
+    if (isOpen) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
     isOpen = !isOpen;
 });
 
@@ -47,7 +70,6 @@ overlay.addEventListener('click', () => {
     isOpen = false;
 });
 
-// Cerrar al hacer click en link (mobile)
 document.querySelectorAll('#menu a').forEach(link => {
     link.addEventListener('click', () => {
         closeMenu();

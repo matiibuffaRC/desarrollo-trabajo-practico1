@@ -12,7 +12,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3b82f6'
+                        primary: '#3B8640'
                     }
                 }
             }
@@ -43,7 +43,7 @@ class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur transiti
         </nav>
 
         <div class="flex items-center gap-3">
-            <button id="theme-toggle" class="text-xl">🌙</button>
+            <button id="theme-toggle" class="text-xl select-none">🌙</button>
 
             <button id="menu-btn" class="md:hidden relative w-7 h-7 flex items-center justify-center">
                 <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
@@ -59,30 +59,49 @@ class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur transiti
 class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-30">
 </div>
 
-<main class="pt-20">
+<main>
 
     <!-- HERO CON FOTO -->
     <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left">
+    
+    <div>
+        <h2 class="text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h2>
         
-        <div>
-            <h2 class="text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h2>
-            <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
-                Desarrollador Web FullStack
-            </p>
-            <p class="text-gray-600 dark:text-gray-400">
-                Estudiante de Ingeniería en Sistemas de Información
-            </p>
-        </div>
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
+            Desarrollador Web FullStack
+        </p>
+        
+        <p class="text-gray-600 dark:text-gray-400">
+            Estudiante de Ingeniería en Sistemas de Información
+        </p>
 
-        <div>
-            <img 
-                src="./imgs/profile-img.jpg"
-                alt="Foto de Matías"
-                class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg max-w-full"
-            >
-        </div>
+        <!-- BOTONES -->
+        <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
 
-    </section>
+            <!-- CV -->
+            <a href="./cv.pdf" target="_blank"
+                class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
+                📄 Ver CV
+            </a>
+
+            <!-- LINKEDIN -->
+            <a href="https://linkedin.com/in/TU-USUARIO" target="_blank"
+                class="flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition">
+                💼 LinkedIn
+            </a>
+
+        </div>
+    </div>
+
+    <div>
+        <img 
+            src="./imgs/profile-img.jpg"
+            alt="Foto de Matías"
+            class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg max-w-full"
+        >
+    </div>
+
+</section>
 
     <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
         <h3 class="text-3xl font-bold mb-10">Sobre mí</h3>
@@ -191,9 +210,11 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
     <!-- PROYECTO 1 -->
-    <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
-        <img src="./imgs/Project1.jfif" alt="Proyecto 1"
-            class="w-full h-48 object-cover">
+    <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+        <div class="overflow-hidden">
+            <img src="./imgs/Project1.jfif" alt="Proyecto 1"
+            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
 
         <div class="p-5 flex flex-col flex-grow">
             <div>
@@ -213,7 +234,7 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
                 </div>
 
                 <div class="flex gap-3">
-                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
                         Demo
                     </a>
                     <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
@@ -225,9 +246,11 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
     </div>
 
     <!-- PROYECTO 2 -->
-    <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
-        <img src="./imgs/Project2.jfif" alt="Proyecto 2"
-            class="w-full h-48 object-cover">
+    <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+        <div class="overflow-hidden">
+            <img src="./imgs/Project2.jfif" alt="Proyecto 1"
+            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
 
         <div class="p-5 flex flex-col flex-grow">
             <div>
@@ -247,7 +270,7 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
                 </div>
 
                 <div class="flex gap-3">
-                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
                         Demo
                     </a>
                     <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
@@ -259,10 +282,11 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
     </div>
 
     <!-- PROYECTO 3 -->
-    <div class="rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
-        <img src="./imgs/Project3.jfif" alt="Proyecto 3"
-            class="w-full h-48 object-cover">
-
+    <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+        <div class="overflow-hidden">
+            <img src="./imgs/Project3.jfif" alt="Proyecto 1"
+            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
         <div class="p-5 flex flex-col flex-grow">
             <div>
                 <h4 class="font-semibold text-xl mb-2">Kioskito</h4>
@@ -281,7 +305,7 @@ class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacit
                 </div>
 
                 <div class="flex gap-3">
-                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-blue-600 text-white hover:bg-blue-700">
+                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
                         Demo
                     </a>
                     <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">

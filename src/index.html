@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio</title>
-
+    <link rel="stylesheet" href="./styles/input.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -18,18 +18,21 @@
             }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+<body class="karla bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
     <header id="header" class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur transition-colors duration-300 z-40 shadow-md">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="font-bold text-lg">Matías Buffa</h1>
+            <h1 class="rubik font-bold text-lg">Matías Buffa</h1>
             <nav id="menu" class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto bg-white dark:bg-gray-900 md:bg-transparent flex flex-col md:flex-row gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
-                <a href="#home" class="hover:text-primary">Inicio</a>
-                <a href="#about" class="hover:text-primary">Sobre mí</a>
-                <a href="#experience" class="hover:text-primary">Experiencia</a>
-                <a href="#projects" class="hover:text-primary">Proyectos</a>
-                <a href="#contact" class="hover:text-primary">Contacto</a>
+                <a href="#home" class="rubik hover:text-primary">Inicio</a>
+                <a href="#about" class="rubik hover:text-primary">Sobre mí</a>
+                <a href="#experience" class="rubik hover:text-primary">Experiencia</a>
+                <a href="#projects" class="rubik hover:text-primary">Proyectos</a>
+                <a href="#contact" class="rubik hover:text-primary">Contacto</a>
             </nav>
             <div class="flex items-center gap-3">
                 <button id="theme-toggle" class="text-xl select-none">🌙</button>
@@ -48,18 +51,18 @@
     <main>
         <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left">
         <div>
-            <h2 class="text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h2>
-            <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
+            <h2 class="rubik text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h2>
+            <p class="rubik text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
                 Desarrollador Web FullStack
             </p>
-            <p class="text-gray-600 dark:text-gray-400">
+            <p class="rubik text-gray-600 dark:text-gray-400">
                 Estudiante de Ingeniería en Sistemas de Información
             </p>
             <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
-                <a href="#" target="_blank" class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
+                <a href="#" target="_blank" class="rubik flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
                     Ver curriculum
                 </a>
-                <a href="https://linkedin.com/in/TU-USUARIO" rel="noopener" target="_blank" class="flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition">
+                <a href="https://linkedin.com/in/TU-USUARIO" rel="noopener" target="_blank" class="rubik flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition">
                     💼 LinkedIn
                 </a>
             </div>
@@ -69,10 +72,10 @@
         </div>
     </section>
     <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold mb-10">Sobre mí</h3>
+        <h3 class="rubik text-3xl font-bold mb-10">Sobre mí</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
-                <h4 class="font-semibold text-lg mb-2">
+                <h4 class="rubik font-semibold text-lg mb-2">
                     Matías Buffa
                 </h4>
                 <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -83,9 +86,9 @@
                 </p>
             </div>
             <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800 md:row-span-2 order-3 md:order-none">
-                <h4 class="text-xl font-semibold mb-6">Habilidades técnicas</h4>
+                <h4 class="rubik text-xl font-semibold mb-6">Habilidades técnicas</h4>
                 <div class="mb-6">
-                    <p class="font-medium mb-2">Lenguajes</p>
+                    <p class="rubik font-medium mb-2">Lenguajes</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">HTML</span>
                         <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">CSS</span>
@@ -95,7 +98,7 @@
                     </div>
                 </div>
                 <div class="mb-6">
-                    <p class="font-medium mb-2">Frameworks y librerías</p>
+                    <p class="rubik font-medium mb-2">Frameworks y librerías</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">React</span>
                         <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TailwindCSS</span>
@@ -105,7 +108,7 @@
                     </div>
                 </div>
                 <div>
-                    <p class="font-medium mb-2">Herramientas</p>
+                    <p class="rubik font-medium mb-2">Herramientas</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Git</span>
                         <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">GitHub</span>
@@ -117,7 +120,7 @@
                 </div>
             </div>
             <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
-                <h4 class="font-semibold text-lg mb-2">
+                <h4 class="rubik font-semibold text-lg mb-2">
                     Ingeniería en Sistemas de Información (2023 - Actualidad)
                 </h4>
 
@@ -133,13 +136,13 @@
 
     <section id="experience" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
         <div class="max-w-5xl mx-auto">
-            <h3 class="text-3xl font-bold mb-10">Experiencia</h3>
+            <h3 class="rubik text-3xl font-bold mb-10">Experiencia</h3>
 
             <div class="space-y-6">
 
                 <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow">
-                    <h4 class="font-semibold text-xl">Desarrollador Frontend</h4>
-                    <p class="text-sm text-gray-500 mb-2">Mercado Libre · 2024 - Actualidad</p>
+                    <h4 class="rubik font-semibold text-xl">Desarrollador Frontend</h4>
+                    <p class="rubik text-sm text-gray-500 mb-2">Mercado Libre · 2024 - Actualidad</p>
                     <p class="text-gray-700 dark:text-gray-300">
                         Durante mi desempeño como Desarrollador Front End en el equipo de Buyer Experience, fui responsable de evolucionar y mantener componentes críticos del flujo de compra, impactando a millones de usuarios en toda la región. Mi enfoque principal estuvo en la creación de interfaces altamente escalables, performantes y accesibles.
                     </p>
@@ -149,8 +152,8 @@
                 </div>
 
                 <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow">
-                    <h4 class="font-semibold text-xl">Freelance</h4>
-                    <p class="text-sm text-gray-500 mb-2">2023 - 2024</p>
+                    <h4 class="rubik font-semibold text-xl">Freelance</h4>
+                    <p class="rubik text-sm text-gray-500 mb-2">2023 - 2024</p>
                     <p class="text-gray-700 dark:text-gray-300">
                         Como Cofundador y Desarrollador Fullstack en este emprendimiento de software independiente, lideré junto a un colega el ciclo de vida completo de diversos productos digitales. Mi rol fue fundamental para traducir necesidades de negocio en soluciones técnicas robustas, escalables y centradas en el usuario.
                     </p>
@@ -163,7 +166,7 @@
     <!-- Sección 3 -->
     <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
         <div class="max-w-6xl mx-auto">
-            <h3 class="text-3xl font-bold mb-10">Proyectos</h3>
+            <h3 class="rubik text-3xl font-bold mb-10">Proyectos</h3>
         <!-- UN SOLO GRID -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <!-- PROYECTO 1 -->
@@ -174,7 +177,7 @@
 
                     <div class="p-5 flex flex-col flex-grow">
                         <div>
-                            <h4 class="font-semibold text-xl mb-2">Zenit</h4>
+                            <h4 class="rubik font-semibold text-xl mb-2">Zenit</h4>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
                                 E-commerce para un negocio de la ciudad, con la posibilidad de armar un carrito y seleccionar cupones de descuento. Primer trabajo serio en el que trabaje en conjunto con un colega y me tocó la parte frontend.
                             </p>
@@ -209,7 +212,7 @@
 
                     <div class="p-5 flex flex-col flex-grow">
                         <div>
-                            <h4 class="font-semibold text-xl mb-2">AutonomIA</h4>
+                            <h4 class="rubik font-semibold text-xl mb-2">AutonomIA</h4>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
                                 Plataforma integral de gestión automotriz diseñada para optimizar la reserva de turnos y servicios de mantenimiento. El sistema integra un motor de inteligencia artificial que genera diagnósticos predictivos y automatizados, personalizando la asistencia según el historial y las especificaciones técnicas de cada vehículo.
                             </p>
@@ -244,7 +247,7 @@
                     </div>
                     <div class="p-5 flex flex-col flex-grow">
                         <div>
-                            <h4 class="font-semibold text-xl mb-2">Kioskito</h4>
+                            <h4 class="rubik font-semibold text-xl mb-2">Kioskito</h4>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
                                 Sistema de control de ventas y stock que profesionaliza la gestión de comercios minoristas. Permite registrar transacciones y métodos de pago de forma segura, asegurando una administración de inventario transparente y precisa. El sistema destaca por su capacidad de elaborar reportes financieros detallados, ofreciendo una visión clara del negocio mediante informes periódicos configurables según las necesidades del usuario.
                             </p>
@@ -276,19 +279,19 @@
 
     <!-- CONTACT -->
         <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
-            <h3 class="text-3xl font-bold mb-10 text-center">Contacto</h3>
+            <h3 class="rubik text-3xl font-bold mb-10 text-center">Contacto</h3>
             <div class="grid md:grid-cols-2 gap-10">
                 <form class="flex flex-col gap-5">
                     <div class="flex flex-col gap-1">
-                        <label for="nombre" class="text-sm font-medium">Nombre</label>
+                        <label for="nombre" class="rubik text-sm font-medium">Nombre</label>
                         <input id="nombre" type="text" placeholder="Tu nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
                     </div>
                     <div class="flex flex-col gap-1">
-                        <label for="email" class="text-sm font-medium">Email</label>
+                        <label for="email" class="rubik text-sm font-medium">Email</label>
                         <input id="email" type="email" placeholder="tucorreo@gmail.com" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
                     </div>
                     <div class="flex flex-col gap-1">
-                        <label for="mensaje" class="text-sm font-medium">Mensaje</label>
+                        <label for="mensaje" class="rubik text-sm font-medium">Mensaje</label>
                         <textarea  id="mensaje" rows="4" placeholder="Dejanos tu mensaje!" class="p-3 rounded bg-gray-100 dark:bg-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-primary">
 
                         </textarea>
@@ -304,29 +307,29 @@
                     <div class="flex flex-row items-center gap-2">
                         <img src="./icons/GithubIcon.svg" alt="" class="h-8 w-8 dark:invert">
                         <div class="flex flex-col">
-                            <a href="https://github.com/matiibuffaRC" rel="noopener" target="_blank" class="text-[1rem] font-bold hover:text-[#2f6b33]">GitHub</a>
-                            <h4 class="text-[.7rem]">MatiibuffaRC</h4>
+                            <a href="https://github.com/matiibuffaRC" rel="noopener" target="_blank" class="rubik text-[1rem] font-bold hover:text-[#2f6b33]">GitHub</a>
+                            <h4 class="rubik text-[.7rem]">MatiibuffaRC</h4>
                         </div>
                     </div>
                     <div class="flex flex-row items-center gap-2">
                         <img src="./icons/LinkedinIcon.svg" alt="" class="h-8 w-8 dark:invert">
                         <div class="flex flex-col">
-                            <a href="https://www.linkedin.com/in/mat%C3%ADas-buffa-b4b901358/" rel="noopener" target="_blank" class="text-[1rem] font-bold hover:text-[#2f6b33]">Linkedin</a>
-                            <h4 class="text-[.7rem]">Matías Buffa</h4>
+                            <a href="https://www.linkedin.com/in/mat%C3%ADas-buffa-b4b901358/" rel="noopener" target="_blank" class="rubik text-[1rem] font-bold hover:text-[#2f6b33]">Linkedin</a>
+                            <h4 class="rubik text-[.7rem]">Matías Buffa</h4>
                         </div>
                     </div>
                     <div class="flex flex-row items-center gap-2">
                         <img src="./icons/WebIcon.png" alt="" class="h-8 w-8 dark:invert">
                         <div class="flex flex-col">
-                            <a href="https://matiibuffa.vercel.app/" rel="noopener" target="_blank" class="text-[1rem] font-bold hover:text-[#2f6b33]">Portfolio Web</a>
-                            <h4 class="text-[.7rem]">Matías Buffa</h4>
+                            <a href="https://matiibuffa.vercel.app/" rel="noopener" target="_blank" class="rubik text-[1rem] font-bold hover:text-[#2f6b33]">Portfolio Web</a>
+                            <h4 class="rubik text-[.7rem]">Matías Buffa</h4>
                         </div>
                     </div>
                     <div class="flex flex-row items-center gap-2">
                         <img src="./icons/UbicationIcon.png" alt="" class="h-8 w-8 dark:invert">
                         <div class="flex flex-col">
-                            <h3 href="" class="text-[1rem] font-bold hover:text-[#2f6b33]">Ubicación</h3>
-                            <h4 class="text-[.7rem]">San Francisco, Córdoba.</h4>
+                            <h3 href="" class="rubik text-[1rem] font-bold hover:text-[#2f6b33]">Ubicación</h3>
+                            <h4 class="rubik text-[.7rem]">San Francisco, Córdoba.</h4>
                         </div>
                     </div>
                 </div>

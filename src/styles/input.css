@@ -11,3 +11,16 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
+
+.link::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.active-link {
+  color: #3B8640; /* verde tipo Tailwind (green-500) */
+}

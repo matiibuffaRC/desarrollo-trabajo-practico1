@@ -6,6 +6,9 @@ const menuBtn = document.getElementById('menu-btn');
 const overlay = document.getElementById('overlay');
 const header = document.getElementById('header');
 const spans = menuBtn.querySelectorAll('span');
+const links = document.querySelectorAll(".link");
+const sections = document.querySelectorAll("section"); 
+
 
 // Estado inicial hamburguesa
 spans[0].style.transform = 'translateY(-6px)';
@@ -74,5 +77,33 @@ document.querySelectorAll('#menu a').forEach(link => {
     link.addEventListener('click', () => {
         closeMenu();
         isOpen = false;
+    });
+});
+
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        links.forEach(l => l.classList.remove("active-link"));
+    link.classList.add("active-link");
+    });
+});
+
+
+window.addEventListener("scroll", () => {
+    let current = "";
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    links.forEach(link => {
+        link.classList.remove("active-link");
+        if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active-link");
+        }
     });
 });

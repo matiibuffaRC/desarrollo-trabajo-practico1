@@ -6,18 +6,6 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./styles/input.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#3B8640'
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -26,17 +14,19 @@
 <body class="karla bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
     <header id="header" class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur transition-colors duration-300 z-30 shadow-md">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="rubik font-bold text-lg">Matías Buffa</h1>
-            <nav id="menu" class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto bg-white dark:bg-gray-900 md:bg-transparent flex flex-col md:flex-row gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
-                <a href="#home" class="rubik hover:text-primary">Inicio</a>
-                <a href="#about" class="rubik hover:text-primary">Sobre mí</a>
-                <a href="#experience" class="rubik hover:text-primary">Experiencia</a>
-                <a href="#projects" class="rubik hover:text-primary">Proyectos</a>
-                <a href="#contact" class="rubik hover:text-primary">Contacto</a>
+            <h2 class="rubik font-bold text-lg">
+                Matías Buffa
+            </h2>
+            <nav aria-label="Navegación principal" id="menu" class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto bg-white dark:bg-gray-900 md:bg-transparent flex flex-col md:flex-row gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
+                <a href="#home" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
+                <a href="#about" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Sobre mí</a>
+                <a href="#experience" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Experiencia</a>
+                <a href="#projects" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Proyectos</a>
+                <a href="#contact" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
             </nav>
             <div class="flex items-center gap-3">
                 <button id="theme-toggle" class="text-xl select-none">🌙</button>
-                <button id="menu-btn" title="ChangeThemeButton" class="md:hidden relative w-7 h-7 flex items-center justify-center">
+                <button aria-label="Abrir menú" id="menu-btn" title="ChangeThemeButton" class="md:hidden relative w-7 h-7 flex items-center justify-center">
                     <!-- Bars menú (no lo toques que lo dejaste lindo) -->
                     <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
                     <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
@@ -44,241 +34,247 @@
                 </button>
             </div>
         </div>
-        <!-- No toques el overlay que desarmas todo después -->
+        <!-- No toques el overlay que desarmas todo después (PRESTÁ ATENCIÓN EL Z-INDEX) -->
         <div id="overlay" class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
         <!--  -->
     </header>
     <main>
-        <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left">
-        <div>
-            <h2 class="rubik text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h2>
-            <p class="rubik text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
-                Desarrollador Web FullStack
+        <!-- Sección 1 - Presentación -->
+        <section id="home" class="section min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left">
+            <div>
+                <h1 class="rubik text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h1>
+                <p class="rubik text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
+                    Desarrollador Web FullStack
+                </p>
+                <p class="rubik text-gray-600 dark:text-gray-400">
+                    Estudiante de Ingeniería en Sistemas de Información
+                </p>
+                <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="./docs/MatíasBuffa-CV.pdf" target="_blank" class="rubik flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
+                        Ver curriculum
+                    </a>
+                    <a href="https://www.linkedin.com/in/mat%C3%ADas-buffa-b4b901358/" rel="noopener" target="_blank" class="rubik font-bold flex justify-center items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img  src="./imgs/profile-img.jpg" alt="Foto de perfil de Matías Buffa" class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg max-w-full">
+            </div>
+        </section>
+        <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
+    <h3 class="rubik text-3xl font-bold mb-10">Sobre mí</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6">
+
+        <!-- BLOQUE 1 (arriba izquierda) -->
+        <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
+            <h4 class="rubik font-semibold text-lg mb-2">
+                Matías Buffa
+            </h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                Soy un desarrollador de software especializado en aplicaciones web Full Stack, enfocado en React y Node.js. Me gusta crear soluciones eficientes y que estéticamente sean lindas.
             </p>
-            <p class="rubik text-gray-600 dark:text-gray-400">
-                Estudiante de Ingeniería en Sistemas de Información
+            <p class="mt-4 text-gray-700 dark:text-gray-300">
+                Puedo destacar de mí como virtudes el trabajo en equipo, la comunicación, y la dedicación ya que cuando no conozco sobre un tema me gusta aprender sobre el mismo y buscar el porqué y el cómo de las cosas.
             </p>
-            <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
-                <a href="./docs/MatíasBuffa-CV.pdf" target="_blank" class="rubik flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
-                    Ver curriculum
-                </a>
-                <a href="https://www.linkedin.com/in/mat%C3%ADas-buffa-b4b901358/" rel="noopener" target="_blank" class="rubik font-bold flex justify-center items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition">
-                    LinkedIn
-                </a>
-            </div>
         </div>
-        <div>
-            <img  src="./imgs/profile-img.jpg" alt="Foto de Matías" class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg max-w-full">
-        </div>
-    </section>
-    <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
-        <h3 class="rubik text-3xl font-bold mb-10">Sobre mí</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
-                <h4 class="rubik font-semibold text-lg mb-2">
-                    Matías Buffa
-                </h4>
-                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Soy un desarrollador de software especializado en aplicaciones web Full Stack, enfocado en React y Node.js. Me gusta crear soluciones eficientes y que estéticamente sean lindas.
-                </p>
-                <p class="mt-4 text-gray-700 dark:text-gray-300">
-                    Puedo destacar de mí como virtudes el trabajo en equipo, la comunicación, y la dedicación ya que cuando no conozco sobre un tema me gusta aprender sobre el mismo y buscar el porqué y el cómo de las cosas.
-                </p>
-            </div>
-            <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800 md:row-span-2 order-3 md:order-0">
-                <h4 class="rubik text-xl font-semibold mb-6">Habilidades técnicas</h4>
-                <div class="mb-6">
-                    <p class="rubik font-medium mb-2">Lenguajes</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">HTML</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">CSS</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">JavaScript</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TypeScript</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">C++</span>
-                    </div>
-                </div>
-                <div class="mb-6">
-                    <p class="rubik font-medium mb-2">Frameworks y librerías</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">React</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TailwindCSS</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Next.js</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Node.js</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Express</span>
-                    </div>
-                </div>
-                <div>
-                    <p class="rubik font-medium mb-2">Herramientas</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Git</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">GitHub</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Figma</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">VS Code</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Jira</span>
-                        <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Pack Office</span>
-                    </div>
+
+        <!-- BLOQUE 2 (derecha ocupa todo el alto) -->
+        <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800 md:row-span-2 h-full">
+            <h4 class="rubik text-xl font-semibold mb-6">Habilidades técnicas</h4>
+
+            <div class="mb-6">
+                <p class="rubik font-medium mb-2">Lenguajes</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">HTML</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">CSS</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">JavaScript</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TypeScript</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">C++</span>
                 </div>
             </div>
-            <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
-                <h4 class="rubik font-semibold text-lg mb-2">
-                    Ingeniería en Sistemas de Información (2023 - Actualidad)
-                </h4>
 
-                <p class="text-gray-700 dark:text-gray-300">
-                    Como mencioné anteriormente me encuentro estudiando Ingeniería en Sistemas de Información, donde aprendí las bases sobre procesos de negocios, lógica, estructura de datos, algoritmos, bases de datos, análisis y diseño de sistemas de información.
-                </p>
+            <div class="mb-6">
+                <p class="rubik font-medium mb-2">Frameworks y librerías</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">React</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TailwindCSS</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Next.js</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Node.js</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Express</span>
+                </div>
             </div>
 
-        </div>
-    </section>
-
-    <!-- Sección 2 -->
-
-    <section id="experience" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="rubik text-3xl font-bold mb-10">Experiencia</h3>
-
-            <div class="space-y-6">
-
-                <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow">
-                    <h4 class="rubik font-semibold text-xl">Desarrollador Frontend</h4>
-                    <p class="rubik text-sm text-gray-500 mb-2">Mercado Libre · 2024 - Actualidad</p>
-                    <p class="text-gray-700 dark:text-gray-300">
-                        Durante mi desempeño como Desarrollador Front End en el equipo de Buyer Experience, fui responsable de evolucionar y mantener componentes críticos del flujo de compra, impactando a millones de usuarios en toda la región. Mi enfoque principal estuvo en la creación de interfaces altamente escalables, performantes y accesibles.
-                    </p>
-                    <p class="text-gray-700 dark:text-gray-300">
-                        Participé en la migración y mantenimiento de módulos independientes utilizando React y Node.js, permitiendo despliegues autónomos y reduciendo la deuda técnica del monolito anterior.
-                    </p>
-                </div>
-
-                <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow">
-                    <h4 class="rubik font-semibold text-xl">Freelance</h4>
-                    <p class="rubik text-sm text-gray-500 mb-2">2023 - 2024</p>
-                    <p class="text-gray-700 dark:text-gray-300">
-                        Como Cofundador y Desarrollador Fullstack en este emprendimiento de software independiente, lideré junto a un colega el ciclo de vida completo de diversos productos digitales. Mi rol fue fundamental para traducir necesidades de negocio en soluciones técnicas robustas, escalables y centradas en el usuario.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección 3 -->
-    <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-800">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="rubik text-3xl font-bold mb-10">Proyectos</h3>
-        <!-- UN SOLO GRID -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- PROYECTO 1 -->
-                <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
-                    <div class="overflow-hidden">
-                        <img src="./imgs/Project1.jfif" alt="Proyecto 1" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-
-                    <div class="p-5 flex flex-col grow">
-                        <div>
-                            <h4 class="rubik font-semibold text-xl mb-2">Zenit</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                                E-commerce para un negocio de la ciudad, con la posibilidad de armar un carrito y seleccionar cupones de descuento. Primer trabajo serio en el que trabaje en conjunto con un colega y me tocó la parte frontend.
-                            </p>
-                        </div>
-                        <div class="mt-auto">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Tailwind</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
-                            </div>
-
-                            <div class="flex gap-3">
-                                <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
-                                    Demo
-                                </a>
-                                <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
-                                    Código
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-    <!-- PROYECTO 2 -->
-                <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
-                    <div class="overflow-hidden">
-                        <img src="./imgs/Project2.jfif" alt="Proyecto 1"
-                        class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-
-                    <div class="p-5 flex flex-col grow">
-                        <div>
-                            <h4 class="rubik font-semibold text-xl mb-2">AutonomIA</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                                Plataforma integral de gestión automotriz diseñada para optimizar la reserva de turnos y servicios de mantenimiento. El sistema integra un motor de inteligencia artificial que genera diagnósticos predictivos y automatizados, personalizando la asistencia según el historial y las especificaciones técnicas de cada vehículo.
-                            </p>
-                        </div>
-
-                        <div class="mt-auto">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
-                            </div>
-
-                            <div class="flex gap-3">
-                                <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
-                                    Demo
-                                </a>
-                                <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
-                                    Código
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-    <!-- PROYECTO 3 -->
-                <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
-                    <div class="overflow-hidden">
-                        <img src="./imgs/Project3.jfif" alt="Proyecto 1"
-                        class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-                    </div>
-                    <div class="p-5 flex flex-col grow">
-                        <div>
-                            <h4 class="rubik font-semibold text-xl mb-2">Kioskito</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                                Sistema de control de ventas y stock que profesionaliza la gestión de comercios minoristas. Permite registrar transacciones y métodos de pago de forma segura, asegurando una administración de inventario transparente y precisa. El sistema destaca por su capacidad de elaborar reportes financieros detallados, ofreciendo una visión clara del negocio mediante informes periódicos configurables según las necesidades del usuario.
-                            </p>
-                        </div>
-
-                        <div class="mt-auto">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
-                                <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
-                            </div>
-
-                            <div class="flex gap-3">
-                                <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
-                                    Demo
-                                </a>
-                                <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
-                                    Código
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div>
+                <p class="rubik font-medium mb-2">Herramientas</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Git</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">GitHub</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Figma</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">VS Code</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Jira</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Pack Office</span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- CONTACT -->
-        <section id="contact" class="py-20 px-4 max-w-5xl mx-auto">
+        <!-- BLOQUE 3 (abajo izquierda) -->
+        <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
+            <h4 class="rubik font-semibold text-lg mb-2">
+                Ingeniería en Sistemas de Información (2023 - Actualidad)
+            </h4>
+
+            <p class="text-gray-700 dark:text-gray-300">
+                Como mencioné anteriormente me encuentro estudiando Ingeniería en Sistemas de Información, donde aprendí las bases sobre procesos de negocios, lógica, estructura de datos, algoritmos, bases de datos, análisis y diseño de sistemas de información.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+        <!-- Sección 2 - Experiencia -->
+
+        <section id="experience" class="section py-20 px-4 bg-gray-100 dark:bg-gray-800">
+            <div class="max-w-5xl mx-auto">
+                <h3 class="rubik text-3xl font-bold mb-10">Experiencia</h3>
+
+                <div class="space-y-6">
+
+                    <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow">
+                        <h4 class="rubik font-semibold text-xl">Desarrollador Frontend</h4>
+                        <p class="rubik text-sm text-gray-500 mb-2">Mercado Libre · 2024 - Actualidad</p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Durante mi desempeño como Desarrollador Front End en el equipo de Buyer Experience, fui responsable de evolucionar y mantener componentes críticos del flujo de compra, impactando a millones de usuarios en toda la región. Mi enfoque principal estuvo en la creación de interfaces altamente escalables, performantes y accesibles.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Participé en la migración y mantenimiento de módulos independientes utilizando React y Node.js, permitiendo despliegues autónomos y reduciendo la deuda técnica del monolito anterior.
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow">
+                        <h4 class="rubik font-semibold text-xl">Freelance</h4>
+                        <p class="rubik text-sm text-gray-500 mb-2">2023 - 2024</p>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Como Cofundador y Desarrollador Fullstack en este emprendimiento de software independiente, lideré junto a un colega el ciclo de vida completo de diversos productos digitales. Mi rol fue fundamental para traducir necesidades de negocio en soluciones técnicas robustas, escalables y centradas en el usuario.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3 - Proyectos -->
+        
+        <section id="projects" class="section py-20 px-4 bg-gray-100 dark:bg-gray-800">
+            <div class="max-w-6xl mx-auto">
+                <h3 class="rubik text-3xl font-bold mb-10">Proyectos</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+                        <div class="overflow-hidden">
+                            <img src="./imgs/Project1.jfif" alt="Proyecto 1" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+
+                        <div class="p-5 flex flex-col grow">
+                            <div>
+                                <h4 class="rubik font-semibold text-xl mb-2">Zenit</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                    E-commerce para un negocio de la ciudad, con la posibilidad de armar un carrito y seleccionar cupones de descuento. Primer trabajo serio en el que trabaje en conjunto con un colega y me tocó la parte frontend.
+                                </p>
+                            </div>
+                            <div class="mt-auto">
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Tailwind</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                                </div>
+
+                                <div class="flex gap-3">
+                                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
+                                        Demo
+                                    </a>
+                                    <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                                        Código
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+                        <div class="overflow-hidden">
+                            <img src="./imgs/Project2.jfif" alt="Proyecto 1"
+                            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+
+                        <div class="p-5 flex flex-col grow">
+                            <div>
+                                <h4 class="rubik font-semibold text-xl mb-2">AutonomIA</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                    Plataforma integral de gestión automotriz diseñada para optimizar la reserva de turnos y servicios de mantenimiento. El sistema integra un motor de inteligencia artificial que genera diagnósticos predictivos y automatizados, personalizando la asistencia según el historial y las especificaciones técnicas de cada vehículo.
+                                </p>
+                            </div>
+
+                            <div class="mt-auto">
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                                </div>
+
+                                <div class="flex gap-3">
+                                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
+                                        Demo
+                                    </a>
+                                    <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                                        Código
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group rounded-2xl overflow-hidden shadow bg-white dark:bg-gray-900 hover:shadow-lg transition flex flex-col">
+                        <div class="overflow-hidden">
+                            <img src="./imgs/Project3.jfif" alt="Proyecto 1"
+                            class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                        <div class="p-5 flex flex-col grow">
+                            <div>
+                                <h4 class="rubik font-semibold text-xl mb-2">Kioskito</h4>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                    Sistema de control de ventas y stock que profesionaliza la gestión de comercios minoristas. Permite registrar transacciones y métodos de pago de forma segura, asegurando una administración de inventario transparente y precisa. El sistema destaca por su capacidad de elaborar reportes financieros detallados, ofreciendo una visión clara del negocio mediante informes periódicos configurables según las necesidades del usuario.
+                                </p>
+                            </div>
+
+                            <div class="mt-auto">
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">MongoDB</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">React.js</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Bootstrap</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">TypeScript</span>
+                                    <span class="text-xs px-3 py-2 bg-gray-200 dark:bg-gray-700 rounded-xl">Node.js</span>
+                                </div>
+
+                                <div class="flex gap-3">
+                                    <a href="#" class="text-sm px-3 py-1 rounded-xl bg-[#3B8640] text-white hover:bg-[#41a046]">
+                                        Demo
+                                    </a>
+                                    <a href="#" class="text-sm px-3 py-1 rounded-xl border border-gray-300 dark:border-gray-600">
+                                        Código
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4 - Contacto -->
+        <section id="contact" class="section py-20 px-4 max-w-5xl mx-auto">
             <h3 class="rubik text-3xl font-bold mb-10 text-center">Contacto</h3>
             <div class="grid md:grid-cols-2 gap-10">
                 <form class="flex flex-col gap-5">
@@ -336,12 +332,13 @@
             </div>
         </section>
     </main>
-
     <footer class="text-center py-4 text-sm text-gray-700 dark:text-gray-400  shadow-[0_-1px_3px_rgba(0,0,0,0.1)]">
         <h3>© 2026 - Desarrollo de Software</h3>
         <h4>Sitio diseño y desarrollador por Matías Buffa</h4>
     </footer>
-
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

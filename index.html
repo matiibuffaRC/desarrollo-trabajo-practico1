@@ -301,23 +301,23 @@
                         <label for="nombre" class="rubik text-sm font-medium">
                             Nombre
                         </label>
-                        <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
+                        <input id="nombre" type="text" name="nombre" required placeholder="Tu nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
                     </div>
                     <div class="flex flex-col gap-1">
                         <label for="email" class="rubik text-sm font-medium">
                             Email
                         </label>
-                        <input id="email" type="email" name="email" placeholder="tucorreo@gmail.com" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
+                        <input id="email" type="email" name="email" required placeholder="tucorreo@gmail.com" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
                     </div>
                     <div class="flex flex-col gap-1">
                         <label for="mensaje" class="rubik text-sm font-medium">Mensaje</label>
                         <textarea  id="mensaje" name="mensaje" rows="4" placeholder="Dejanos tu mensaje!" class="p-3 rounded bg-gray-100 dark:bg-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                     </div>
-                    <button title="SendButton" type="submit" class="bg-primary text-white py-3 rounded hover:opacity-90 transition">
+                    <button title="SendButton" type="submit" required class="bg-primary text-white py-3 rounded hover:opacity-90 transition">
                         Enviar
                     </button>
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_redirect" value="https://matiasbuffa.vercel.app/pages/formConfirm.html">
+                    <input type="hidden" name="_redirect" value="https://matiasBuffa.vercel.app/src/pages/formConfirm.html">
                 
                 </form>
                 

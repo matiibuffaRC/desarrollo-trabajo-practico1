@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const countdown = document.getElementById("countdown");
     const cancelBtn = document.getElementById("cancel-redirect");
+    const text = document.getElementById("redirect-text");
 
-    // Si no existe el contador, no ejecuta nada
     if (!countdown) return;
 
     countdown.textContent = segundos;
@@ -20,11 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, 1000);
 
-    // Solo si existe el botón
     if (cancelBtn) {
         cancelBtn.addEventListener("click", () => {
             clearInterval(intervalo);
-            countdown.textContent = "cancelada";
+            text.textContent = "Redirección cancelada.";
         });
     }
 

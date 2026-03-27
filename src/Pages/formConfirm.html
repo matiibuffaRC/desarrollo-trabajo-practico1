@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mensaje enviado</title>
+
+    <link rel="stylesheet" href="./styles/input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik&display=swap" rel="stylesheet">
+</head>
+
+<body class="karla bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+    <main class="grow flex items-center justify-center">
+        <div class="text-center max-w-lg px-6">
+            <h1 class="rubik text-4xl md:text-5xl font-bold m-4">
+                ¡Mensaje enviado!
+            </h1>
+            <p class="text-gray-600 dark:text-gray-400 my-4">
+                Gracias por contactarte. Voy a responderte lo antes posible.
+            </p>
+            <a href="index.html"
+                class="inline-block bg-primary text-white px-6 py-3 rounded-xl hover:bg-[#2f6b33] transition shadow-md my-4">
+                Volver al inicio
+            </a>
+            <p class="text-sm mt-4 opacity-70">
+                Serás redirigido en <span id="countdown">5</span> segundos...
+            </p>
+
+            <button id="cancel-redirect" class="mt-2 text-sm underline">
+                Cancelar redirección
+            </button>
+        </div>
+    </main>
+    <footer class="w-full text-center py-5 text-sm text-gray-700 dark:text-gray-400 shadow-[0_-1px_3px_rgba(0,0,0,0.1)]">
+        <h3>© 2026 - Desarrollo de Software</h3>
+        <h4>Sitio diseñado y desarrollado por Matías Buffa</h4>
+    </footer>
+    <script src="../tailwind-config.js"></script>
+    <script src="../script.js"></script>
+    <script src="../formConfirm.js"></script>
+</body>
+</html>

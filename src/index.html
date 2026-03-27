@@ -12,13 +12,18 @@
 </head>
 
 <body class="karla bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <button id="btnTop"
+        class="fixed bottom-5 right-5 z-50 opacity-0 pointer-events-none transition-all duration-300 bg-primary text-white px-4 py-3 rounded-[50%] shadow-lg hover:scale-110">
+        ↑
+    </button>
+
     <header id="header" class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur transition-colors duration-300 z-30 shadow-md">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <h2 class="rubik font-bold text-lg">
                 Matías Buffa
             </h2>
-            <nav aria-label="Navegación principal" id="menu" class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto bg-white dark:bg-gray-900 md:bg-transparent flex flex-col md:flex-row gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
-                <a href="#home" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
+            <nav aria-label="Navegación principal" id="menu" class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto bg-white dark:bg-gray-900 lg:bg-transparent flex flex-col md:flex-row gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
+                <a href="#home" class="rubik hover:text -primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
                 <a href="#about" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Sobre mí</a>
                 <a href="#experience" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Experiencia</a>
                 <a href="#projects" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Proyectos</a>
@@ -26,31 +31,33 @@
             </nav>
             <div class="flex items-center gap-3">
                 <button id="theme-toggle" class="text-xl select-none">🌙</button>
-                <button aria-label="Abrir menú" id="menu-btn" title="ChangeThemeButton" class="md:hidden relative w-7 h-7 flex items-center justify-center">
-                    <!-- Bars menú (no lo toques que lo dejaste lindo) -->
+                <button aria-label="Abrir menú" id="menu-btn" class="md:hidden relative w-7 h-7 flex items-center justify-center">
                     <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
                     <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
                     <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
                 </button>
             </div>
         </div>
-        <!-- No toques el overlay que desarmas todo después (PRESTÁ ATENCIÓN EL Z-INDEX) -->
+
         <div id="overlay" class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
-        <!--  -->
     </header>
     <main>
         <!-- Sección 1 - Presentación -->
-        <section id="home" class="section min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left">
+        <section id="home" class="section relative min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-4 text-center md:text-left">
             <div>
-                <h1 class="rubik text-5xl md:text-6xl font-bold mb-4">Matías Buffa</h1>
-                <p class="rubik text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-4">
+                <h1 class="rubik text-5xl md:text-6xl font-bold">
+                    Matías Buffa
+                </h1>
+                <p class="rubik text-lg md:text-xl text-gray-700 dark:text-gray-300 lg:pl-0.5">
                     Desarrollador Web FullStack
                 </p>
-                <p class="rubik text-gray-600 dark:text-gray-400">
+                <p class="rubik text-gray-600 dark:text-gray-400 lg:pl-0.5">
                     Estudiante de Ingeniería en Sistemas de Información
                 </p>
+
                 <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
-                    <a href="./docs/MatíasBuffa-CV.pdf" target="_blank" class="rubik flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
+                    <a href="./docs/MatíasBuffa-CV.pdf" target="_blank"
+                    class="rubik flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
                         Ver curriculum
                     </a>
                     <a href="https://www.linkedin.com/in/mat%C3%ADas-buffa-b4b901358/" rel="noopener" target="_blank" class="rubik font-bold flex justify-center items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition">
@@ -58,80 +65,89 @@
                     </a>
                 </div>
             </div>
+
             <div>
-                <img  src="./imgs/profile-img.jpg" alt="Foto de perfil de Matías Buffa" class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg max-w-full">
+                <img src="./imgs/profile-img.jpg" alt="Foto de perfil de Matías Buffa" class="w-48 h-48 md:w-64 md:h-64 object-cover object-bottom rounded-full shadow-lg max-w-full">
+            </div>
+            <div id="scroll-indicator" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500">
+                <div class="flex flex-col items-center animate-bounce text-gray-700 dark:text-gray-300">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" troke-linejoin="round" troke-width="4" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
             </div>
         </section>
         <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
-    <h3 class="rubik text-3xl font-bold mb-10">Sobre mí</h3>
+            <h3 class="rubik text-3xl font-bold mb-10">Sobre mí</h3>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6">
 
-        <!-- BLOQUE 1 (arriba izquierda) -->
-        <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
-            <h4 class="rubik font-semibold text-lg mb-2">
-                Matías Buffa
-            </h4>
-            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                Soy un desarrollador de software especializado en aplicaciones web Full Stack, enfocado en React y Node.js. Me gusta crear soluciones eficientes y que estéticamente sean lindas.
-            </p>
-            <p class="mt-4 text-gray-700 dark:text-gray-300">
-                Puedo destacar de mí como virtudes el trabajo en equipo, la comunicación, y la dedicación ya que cuando no conozco sobre un tema me gusta aprender sobre el mismo y buscar el porqué y el cómo de las cosas.
-            </p>
-        </div>
-
-        <!-- BLOQUE 2 (derecha ocupa todo el alto) -->
-        <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800 md:row-span-2 h-full">
-            <h4 class="rubik text-xl font-semibold mb-6">Habilidades técnicas</h4>
-
-            <div class="mb-6">
-                <p class="rubik font-medium mb-2">Lenguajes</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">HTML</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">CSS</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">JavaScript</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TypeScript</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">C++</span>
+                <!-- BLOQUE 1 (arriba izquierda) -->
+                <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
+                    <h4 class="rubik font-semibold text-lg mb-2">
+                        Matías Buffa
+                    </h4>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        Soy un desarrollador de software especializado en aplicaciones web Full Stack, enfocado en React y Node.js. Me gusta crear soluciones eficientes y que estéticamente sean lindas.
+                    </p>
+                    <p class="mt-4 text-gray-700 dark:text-gray-300">
+                        Puedo destacar de mí como virtudes el trabajo en equipo, la comunicación, y la dedicación ya que cuando no conozco sobre un tema me gusta aprender sobre el mismo y buscar el porqué y el cómo de las cosas.
+                    </p>
                 </div>
-            </div>
 
-            <div class="mb-6">
-                <p class="rubik font-medium mb-2">Frameworks y librerías</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">React</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TailwindCSS</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Next.js</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Node.js</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Express</span>
+                <!-- BLOQUE 2 (derecha ocupa todo el alto) -->
+                <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800 md:row-span-2 h-full">
+                    <h4 class="rubik text-xl font-semibold mb-6">Habilidades técnicas</h4>
+
+                    <div class="mb-6">
+                        <p class="rubik font-medium mb-2">Lenguajes</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">HTML</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">CSS</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">JavaScript</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TypeScript</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">C++</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="rubik font-medium mb-2">Frameworks y librerías</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">React</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">TailwindCSS</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Next.js</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Node.js</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Express</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="rubik font-medium mb-2">Herramientas</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Git</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">GitHub</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Figma</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">VS Code</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Jira</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Pack Office</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <p class="rubik font-medium mb-2">Herramientas</p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Git</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">GitHub</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Figma</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">VS Code</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Jira</span>
-                    <span class="px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">Pack Office</span>
+                <!-- BLOQUE 3 (abajo izquierda) -->
+                <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
+                    <h4 class="rubik font-semibold text-lg mb-2">
+                        Ingeniería en Sistemas de Información (2023 - Actualidad)
+                    </h4>
+
+                    <p class="text-gray-700 dark:text-gray-300">
+                        Como mencioné anteriormente me encuentro estudiando Ingeniería en Sistemas de Información, donde aprendí las bases sobre procesos de negocios, lógica, estructura de datos, algoritmos, bases de datos, análisis y diseño de sistemas de información.
+                    </p>
                 </div>
+
             </div>
-        </div>
-
-        <!-- BLOQUE 3 (abajo izquierda) -->
-        <div class="p-6 rounded-2xl bg-gray-100 dark:bg-gray-800">
-            <h4 class="rubik font-semibold text-lg mb-2">
-                Ingeniería en Sistemas de Información (2023 - Actualidad)
-            </h4>
-
-            <p class="text-gray-700 dark:text-gray-300">
-                Como mencioné anteriormente me encuentro estudiando Ingeniería en Sistemas de Información, donde aprendí las bases sobre procesos de negocios, lógica, estructura de datos, algoritmos, bases de datos, análisis y diseño de sistemas de información.
-            </p>
-        </div>
-
-    </div>
-</section>
+        </section>
 
         <!-- Sección 2 - Experiencia -->
 

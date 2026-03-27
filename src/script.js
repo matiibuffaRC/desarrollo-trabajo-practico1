@@ -107,3 +107,46 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+// Botón del scroll
+
+const btnTop = document.getElementById("btnTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+        btnTop.classList.remove("opacity-0", "pointer-events-none");
+        btnTop.classList.add("opacity-100");
+    } else {
+        btnTop.classList.add("opacity-0", "pointer-events-none");
+        btnTop.classList.remove("opacity-100");
+    }
+});
+
+// Scroll hacia arriba
+btnTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+// 
+
+const scrollIndicator = document.getElementById('scroll-indicator');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        scrollIndicator.style.opacity = '0';
+        scrollIndicator.style.pointerEvents = 'none';
+    } else {
+        scrollIndicator.style.opacity = '1';
+        scrollIndicator.style.pointerEvents = 'auto';
+    }
+});
+
+scrollIndicator.addEventListener('click', () => {
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+    });
+});

@@ -19,6 +19,7 @@ Funcionalidades:
   - Opición de cancelación de redirección automática+
 
 Formulario de contacto:
+
 El formulario está conectado con Formspree, lo que permite enviar mensajes sin necesidad de backend propio.
 
 Lo mejoré con un poco de javascript para:
@@ -27,6 +28,7 @@ Lo mejoré con un poco de javascript para:
   - Redirigir manualmente a una página de confirmación
 
 Deploy:
+
 Lo hice con vercel y lo podes ver online acá:
 👉 https://tu-link.vercel.app
 

@@ -171,3 +171,26 @@ scrollIndicator.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        window.location.href = "/pages/formConfirm.html";
+    } else {
+        alert("Error al enviar ❌");
+    }
+});

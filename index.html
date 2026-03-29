@@ -352,30 +352,32 @@
             <h3 class="rubik text-3xl font-bold mb-10 text-center">Contacto</h3>
             <div class="grid md:grid-cols-2 gap-10">
 
-                <form class="flex flex-col gap-5" action="https://formspree.io/f/xjgpgvwj" method="POST">
+                <form id="form" class="flex flex-col gap-5" action="https://formspree.io/f/xjgpgvwj" method="POST">
 
                     <div class="flex flex-col gap-1">
-                        <label for="nombre" class="rubik text-sm font-medium">
-                            Nombre
-                        </label>
-                        <input id="nombre" type="text" name="nombre" required placeholder="Tu nombre" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
+                        <label for="nombre" class="rubik text-sm font-medium">Nombre</label>
+                        <input id="nombre" type="text" name="nombre" required placeholder="Tu nombre"
+                        class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
                     </div>
                     <div class="flex flex-col gap-1">
-                        <label for="email" class="rubik text-sm font-medium">
-                            Email
-                        </label>
-                        <input id="email" type="email" name="email" required placeholder="tucorreo@gmail.com" class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
+                        <label for="email" class="rubik text-sm font-medium">Email</label>
+                        <input id="email" type="email" name="email" required placeholder="tucorreo@gmail.com"
+                        class="p-3 rounded bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"/>
                     </div>
                     <div class="flex flex-col gap-1">
                         <label for="mensaje" class="rubik text-sm font-medium">Mensaje</label>
-                        <textarea  id="mensaje" name="mensaje" rows="4" placeholder="Dejanos tu mensaje!" class="p-3 rounded bg-gray-100 dark:bg-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        <textarea id="mensaje" name="mensaje" rows="4"
+                        placeholder="Dejanos tu mensaje!"
+                        class="p-3 rounded bg-gray-100 dark:bg-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                     </div>
-                    <button title="SendButton" type="submit" required class="bg-primary text-white py-3 rounded hover:opacity-90 transition">
+                    <button type="submit"
+                    class="bg-primary text-white py-3 rounded hover:opacity-90 transition">
                         Enviar
                     </button>
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_redirect" value="https://matiasBuffa.vercel.app/pages/formConfirm.html">
-                
+                    <p id="success" class="hidden text-green-500 text-sm">
+                        Mensaje enviado correctamente ✅
+                    </p>
+
                 </form>
                 
                 <!-- REDES SOCIALES -->

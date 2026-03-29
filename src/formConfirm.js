@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (segundos === 0) {
             clearInterval(intervalo);
-            window.location.href = "index.html";
+            window.location.href = "/";
         }
     }, 1000);
 

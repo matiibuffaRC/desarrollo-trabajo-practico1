@@ -2,7 +2,7 @@ En el presente trabajo práctico realicé mi portafolio web utilizando:
   - HTML para la estructura de la web.
   - TailwindCSS para los estilos.
   - Javascript para agregarle iteración a la página.
-  - Formspreed para la recepción de los menajes del formulario de contacto.
+  - Formspree para la recepción de los menajes del formulario de contacto.
   - Vercel para el alojamiento estático de la web.
 
 La idea principal fue respetar la consigna del trabajo ya que podría haber implementado React para un desarrollo por componentes y es una tecnología que ya trabajé. Utilicé javascript para tener un manejo del DOM y poder agregar

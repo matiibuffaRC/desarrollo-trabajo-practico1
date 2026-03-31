@@ -30,5 +30,5 @@ Lo mejoré con un poco de javascript para:
 Deploy:
 
 Lo hice con vercel y lo podes ver online acá:
-👉 https://tu-link.vercel.app
+👉 https://matiasbuffa.vercel.app/
 

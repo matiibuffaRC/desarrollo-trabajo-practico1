@@ -12,19 +12,14 @@ const btnTop = document.getElementById("btnTop"); // Boton de retorno al top
 const scrollIndicator = document.getElementById('scroll-indicator'); // Boton para bajar
 let isOpen = false; // Estado del menú mobile
 
-
-// Estado inicial del menú mobile
 spans[0].style.transform = 'translateY(-6px)';
 spans[2].style.transform = 'translateY(6px)';
 
-
-// 🌙 Aplicar tema guardado al cargar
 if (localStorage.getItem('theme') === 'dark') {
     html.classList.add('dark');
 }
 
 
-// 🔥 Toggle de tema (SIN animaciones extras)
 toggle.addEventListener('click', () => {
     html.classList.toggle('dark');
 
@@ -33,7 +28,7 @@ toggle.addEventListener('click', () => {
 });
 
 
-// ================= MENU MOBILE =================
+// Mobile menu
 
 function openMenu() {
     menu.classList.remove('-translate-x-full');
@@ -87,7 +82,7 @@ document.querySelectorAll('#menu a').forEach(link => {
 });
 
 
-// ================= LINKS ACTIVOS =================
+// Link / seccion activa
 
 links.forEach(link => {
     link.addEventListener("click", () => {
@@ -117,11 +112,10 @@ window.addEventListener("scroll", () => {
 });
 
 
-// ================= BOTON TOP + INDICADOR =================
+// Boton de regreso para el top
 
 window.addEventListener('scroll', () => {
 
-    // 🔝 Botón top
     if (window.scrollY > 200) {
         btnTop.classList.remove("opacity-0", "pointer-events-none");
         btnTop.classList.add("opacity-100");
@@ -130,7 +124,6 @@ window.addEventListener('scroll', () => {
         btnTop.classList.remove("opacity-100");
     }
 
-    // Indicador scroll
     const maxScroll = 150;
     const opacity = 1 - window.scrollY / maxScroll;
 
@@ -151,7 +144,7 @@ btnTop.addEventListener("click", () => {
 });
 
 
-// ================= SCROLL HACIA ABAJO =================
+//  SCROLL HACIA ABAJO
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -171,7 +164,7 @@ scrollIndicator.addEventListener('click', () => {
 });
 
 
-// ================= FORM =================
+// Formulario
 
 const form = document.querySelector("form");
 

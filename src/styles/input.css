@@ -1,3 +1,5 @@
+/* Fuentes */
+
 .rubik{
     font-family: Rubik, sans-serif;
     font-optical-sizing: auto;
@@ -8,6 +10,24 @@
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+/*  */
+
+:root {
+  --primary: #3B8640;
+
+  --bg: #ffffff;
+  --text: #111827;
+
+  --card: #f3f4f6;
+}
+
+.dark {
+  --bg: #111827;
+  --text: #f9fafb;
+
+  --card: #1f2937;
 }
 
 .link::after {

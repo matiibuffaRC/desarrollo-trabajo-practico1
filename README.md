@@ -16,7 +16,8 @@ Funcionalidades:
   - Formulario de contacto funcional
   - Página de confirmación de envío de formulario
   - Redirección automática al portafolio
-  - Opición de cancelación de redirección automática+
+  - Opición de cancelación de redirección automática
+  - Guardado del modo oscuro / claro usado por el usuario en el localstorage.
 
 Formulario de contacto:
 
@@ -26,6 +27,7 @@ Lo mejoré con un poco de javascript para:
   - Evitar redirecciones externas
   - Controlar el envío con fetch
   - Redirigir manualmente a una página de confirmación
+  - Uso del localstorage
 
 Deploy:
 

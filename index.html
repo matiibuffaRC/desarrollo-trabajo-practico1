@@ -19,25 +19,40 @@
 
     <header id="header" class="fixed w-full top-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur transition-colors duration-300 z-30 shadow-md">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
             <a href="#home" class="rubik font-bold text-lg">
                 Matías Buffa
             </a>
-            <nav aria-label="Navegación principal" id="menu" class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto bg-white dark:bg-gray-900 lg:bg-transparent flex flex-col md:flex-row gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
-                <a href="#home" class="rubik hover:text -primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
-                <a href="#about" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Sobre mí</a>
-                <a href="#experience" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Experiencia</a>
-                <a href="#projects" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Proyectos</a>
-                <a href="#contact" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
-            </nav>
-            <div class="flex items-center gap-3">
-                <button id="theme-toggle" class="text-xl select-none transition-transform duration-500">
-                    🌙
-                </button>
-                <button aria-label="Abrir menú" id="menu-btn" class="md:hidden relative w-7 h-7 flex items-center justify-center">
-                    <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
-                    <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
-                    <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
-                </button>
+
+            <!-- 🔥 CONTENEDOR NAV + TOGGLE -->
+            <div class="flex items-center gap-6">
+
+                <nav aria-label="Navegación principal" id="menu"
+                    class="fixed md:static top-0 left-0 h-full md:h-auto w-64 md:w-auto bg-white dark:bg-gray-900 lg:bg-transparent flex flex-col md:flex-row gap-6 p-6 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
+                    
+                    <a href="#home" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
+                    <a href="#about" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Sobre mí</a>
+                    <a href="#experience" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Experiencia</a>
+                    <a href="#projects" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Proyectos</a>
+                    <a href="#contact" class="rubik hover:text-primary link relative after:content-[''] after:absolute after:bottom-0 after:w-0 after:h-0.5 after:bg-current after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
+                </nav>
+
+                <!-- Toggle + botón mobile -->
+                <div class="flex items-center gap-3">
+
+                    <button id="theme-toggle"
+                        class="w-10 h-5 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full p-1 transition-colors duration-300">
+                        <span class="w-3 h-3 bg-white rounded-full shadow-md transform transition-transform duration-300 translate-x-0 dark:translate-x-5"></span>
+                    </button>
+
+                    <button aria-label="Abrir menú" id="menu-btn"
+                        class="md:hidden relative w-7 h-7 flex items-center justify-center">
+                        <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
+                        <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
+                        <span class="absolute w-5 h-0.5 bg-current transition-all duration-300"></span>
+                    </button>
+
+                </div>
             </div>
         </div>
 
@@ -59,11 +74,11 @@
 
                 <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
                     <a href="./docs/MatíasBuffa-CV.pdf" target="_blank"
-                    class="rubik flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition shadow-md">
+                    class="rubik flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl hover:bg-[#2f6b33] transition-all duration-500 shadow-md">
                         Ver curriculum
                     </a>
-                    <a href="https://www.linkedin.com/in/mat%C3%ADas-buffa-b4b901358/" rel="noopener" target="_blank" class="rubik font-bold flex justify-center items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition">
-                        LinkedIn
+                    <a href="https://www.linkedin.com/in/mat%C3%ADas-buffa-b4b901358/" rel="noopener" target="_blank" class="rubik font-bold flex justify-center items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-xl hover:bg-primary hover:text-white transition-all duration-500">
+                        Linkedin
                     </a>
                 </div>
             </div>

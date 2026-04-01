@@ -18,28 +18,22 @@ spans[0].style.transform = 'translateY(-6px)';
 spans[2].style.transform = 'translateY(6px)';
 
 
-// Cambiamos el tema y lo guardamos
+// 🌙 Aplicar tema guardado al cargar
+if (localStorage.getItem('theme') === 'dark') {
+    html.classList.add('dark');
+}
+
+
+// 🔥 Toggle de tema (SIN animaciones extras)
 toggle.addEventListener('click', () => {
     html.classList.toggle('dark');
 
     const isDark = html.classList.contains('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
-
-    toggle.style.transform = 'rotate(360deg)';
-
-    setTimeout(() => {
-        toggle.textContent = isDark ? '☀️' : '🌙';
-    }, 250);
-
-    setTimeout(() => {
-        toggle.style.transform = 'rotate(0deg)';
-    }, 500);
 });
 
-if (localStorage.getItem('theme') === 'dark') {
-    html.classList.add('dark');
-    toggle.textContent = '☀️';
-}
+
+// ================= MENU MOBILE =================
 
 function openMenu() {
     menu.classList.remove('-translate-x-full');
@@ -47,7 +41,6 @@ function openMenu() {
     overlay.classList.remove('opacity-0', 'pointer-events-none');
     overlay.classList.add('opacity-100');
 
-    // 🔥 quitar blur
     header.classList.remove('backdrop-blur');
 
     document.body.classList.add('overflow-hidden');
@@ -62,6 +55,7 @@ function closeMenu() {
 
     overlay.classList.add('opacity-0', 'pointer-events-none');
     overlay.classList.remove('opacity-100');
+
     header.classList.add('backdrop-blur');
 
     document.body.classList.remove('overflow-hidden');
@@ -92,13 +86,15 @@ document.querySelectorAll('#menu a').forEach(link => {
     });
 });
 
+
+// ================= LINKS ACTIVOS =================
+
 links.forEach(link => {
     link.addEventListener("click", () => {
         links.forEach(l => l.classList.remove("active-link"));
-    link.classList.add("active-link");
+        link.classList.add("active-link");
     });
 });
-
 
 window.addEventListener("scroll", () => {
     let current = "";
@@ -115,14 +111,16 @@ window.addEventListener("scroll", () => {
     links.forEach(link => {
         link.classList.remove("active-link");
         if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active-link");
+            link.classList.add("active-link");
         }
     });
 });
 
-// Botón del scroll
+
+// ================= BOTON TOP + INDICADOR =================
 
 window.addEventListener('scroll', () => {
+
     // 🔝 Botón top
     if (window.scrollY > 200) {
         btnTop.classList.remove("opacity-0", "pointer-events-none");
@@ -131,6 +129,8 @@ window.addEventListener('scroll', () => {
         btnTop.classList.add("opacity-0", "pointer-events-none");
         btnTop.classList.remove("opacity-100");
     }
+
+    // Indicador scroll
     const maxScroll = 150;
     const opacity = 1 - window.scrollY / maxScroll;
 
@@ -143,7 +143,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
 btnTop.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
@@ -151,9 +150,8 @@ btnTop.addEventListener("click", () => {
     });
 });
 
-// 
 
-// Boton para scroll para abajo
+// ================= SCROLL HACIA ABAJO =================
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -172,6 +170,8 @@ scrollIndicator.addEventListener('click', () => {
     });
 });
 
+
+// ================= FORM =================
 
 const form = document.querySelector("form");
 
